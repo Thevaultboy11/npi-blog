@@ -1,10 +1,20 @@
-﻿**Operacije u C++**
+﻿---
+title: "Operacija u c++"
+pubDate: "2020-01-28"
+slug: "how-to-compare-dates-in-javascript"
+description: "Najucestalnije operacije u C++."
+hero: "/images/javascript-logo-banner.jpg"
+tags: ["javascript"]
+layout: "../../layouts/BlogPostLayout.astro"
+---
+
+**Operacije u C++**
 
 **Aritmetičke operacije u C++**
 
-Aritmetičke operacije su osnovne matematičke operacije koje omogućavaju manipulaciju brojevima u programskom jeziku C++. Ove operacije su ključne za izvođenje različitih matematičkih i numeričkih zadatka u vašim programima. Ovde ćemo istražiti osnovne aritmetičke operacije i pružiti primere njihove upotrebe. 
+Aritmetičke operacije su osnovne matematičke operacije koje omogućavaju manipulaciju brojevima u programskom jeziku C++. Ove operacije su ključne za izvođenje različitih matematičkih i numeričkih zadatka u vašim programima. Ovde ćemo istražiti osnovne aritmetičke operacije i pružiti primere njihove upotrebe.
 
-**Sabiranje (+)** 
+**Sabiranje (+)**
 
 Operacija sabiranja omogućava dodavanje dva broja zajedno. Evo kako to izgleda u C++:
 
@@ -72,7 +82,7 @@ Logičke operacije i uslovni operatori su ključni elementi programiranja koji o
 
 **Logički Operatori**
 
-Logički operatori se koriste za povezivanje i analizu logičkih izraza. U C++-u, najčešće korišćeni logički operatori uključuju: 
+Logički operatori se koriste za povezivanje i analizu logičkih izraza. U C++-u, najčešće korišćeni logički operatori uključuju:
 
 AND (&&): Operator "i" vraća true samo ako su oba uslova tačna.
 
@@ -138,11 +148,11 @@ Za pristupanje elementima niza, koristite indeksiranje. Na primer, da biste pris
 
 Dodavanje elemenata nizu:
 
-Da biste dodali element na kraj niza, koristite funkciju push\_back() (u slučaju vektora) ili pravilno upravljajte indeksima.
+Da biste dodali element na kraj niza, koristite funkciju push_back() (u slučaju vektora) ili pravilno upravljajte indeksima.
 
 Uklanjanje elemenata iz niza:
 
-Da biste uklonili element iz niza, možete koristiti funkcije kao što su pop\_back() (za vektore) ili ručno upravljati indeksima.
+Da biste uklonili element iz niza, možete koristiti funkcije kao što su pop_back() (za vektore) ili ručno upravljati indeksima.
 
 Pretraga u nizu:
 
@@ -160,17 +170,6 @@ Spajanje stringova:
 
 Da biste spojili dva stringa, možete koristiti operator + ili funkciju append().
 
-
-
-
-
-
-
-
-
-
-
-
 Funkcija substr() omogućava vam da izvadite deo stringa.
 
 Pronalaženje podstringa:
@@ -183,14 +182,10 @@ Funkcija replace() omogućava zamenu dela stringa drugim stringom.
 
 Konverzija između stringa i C-style nizova:
 
-Možete koristiti funkcije c\_str() i data() za konverziju stringa u C-style niz i obrnuto.
+Možete koristiti funkcije c_str() i data() za konverziju stringa u C-style niz i obrnuto.
 
 Rad sa karakterima u stringu:
 
 Pristupanje pojedinim karakterima u stringu vrši se pomoću indeksiranja.
 
-Operacije nad nizovima i stringovima su ključne za rad s tekstom i kolekcijama podataka. Razumevanje ovih operacija omogućava vam da efikasno manipulišete podacima u C++ i izgradite različite vrste aplikacija koje se bave tekstom i kolekcijama podataka. 
-
-
-
-
+Operacije nad nizovima i stringovima su ključne za rad s tekstom i kolekcijama podataka. Razumevanje ovih operacija omogućava vam da efikasno manipulišete podacima u C++ i izgradite različite vrste aplikacija koje se bave tekstom i kolekcijama podataka.
