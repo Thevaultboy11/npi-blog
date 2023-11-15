@@ -1,0 +1,55 @@
+---
+import BaseHead from '../../components/Head/BaseHead.astro';
+import Nav from '../../components/Nav.astro';
+import HomeHeader from '../../components/HomeHeader.astro';
+import Card from '../../components/Card.astro';
+import Footer from '../../components/Footer/Footer.astro';
+import  '../../styles/main.scss';
+import Form from '../../components/Form'
+const meta = {
+  title: "Starship Shield Hybrid Assessment",
+};
+
+const description = 'Projekat od Ucenika III-5';
+const seoDescription = 'Kako nauciti python u 15min';
+const title = `Kako nauciti python u 15min`
+const text_1 = `Python je opšte namenski programski jezik koji je dobio ime po Monty Python-u. On je jednostavan i neverovatno čitljiv. Odličan je za početnike i sve one koji žele da uplivaju u programerske vode. Postoje razne biblioteke koje su kreirane za njega, a tiču se matematike, fizike, analize podataka itd. Koristi se u raznim industrijama i upotrebljavaju ga kompanije kao što su Google, NASA, Reddit, Disney. Python skriptu procesuira interpreter. Interpreter predstavlja program koji izvršava skriptu napisanu na jeziku koji prepoznaje interpreter, što je u ovom slučaju to Python. Python programski jezikPostoje 3 glavne verzije Python-a, to su 1. x, 2. x i 3. x. One su podeljene na verzije 2. 7 i 3. 3 i obe verzije su trenutno u upotrebi. Kompatabilne promene su napravljene samo između glavnih verzija. Kod koji je napisan za Python 3. x će garantovano da radi u svim budućim verzijama. Tutorijali će obuhvatiti Python 3.`
+const text_2 = `Python takođe ima nekoliko različitih implementacija, pisanih na različitim jezicima. Verzija korišćena u tutorijalima je CPython koja je inače najpopularnija. Ekstenzija za izvorne Python fajlove je . pySkidanje programa (download)Prvi korak koji je potreban je da se skine Python program sa **www. python. org/downloads. Program je besplatan. Preporuka je da se skine verzija Python 3. x koja je kompatabilna sa vašim operativnim sistemom. Onog trenutka kada instalirate program, Python konzoli može da se pristupi na više načina, uključujući command line gde se direktno pokreće Python interpreter ili korišćenjem GUI koji dolazi instaliran sa instalacijom samog programa i zove se IDLE (an Integrated DeveLopment Environment for Python). Tokom narednih tutorijala koristiće se oba načina ali za početak uz primere biće pokrenut IDLE, jer je najlakši. Nakon pokretanja IDLE, trebalo bi da vidite command prompt sa tri zvezdice sa leve strane, ukucajte ono što je obojeno crvenim slovima i pritisnite ENTER (primer i slika u nastavku). Python konzolaPython konzola je program koji omogućava da unesete jednu liniju Python koda, koju možete da ponavljate. Ovo je poznato i kao REPL (read eval print loop). Nakon što se rezultat za kod print (“Hello World”) prikazao, možete da ponovo unesete kod i dobićete isti rezultat. Pokušajte da unesete isti kod ali sa različitim tekstom itd.`
+
+---
+<body class="bg-white text-black font-body leading-normal personality-casual">
+  <BaseHead meta={meta} />
+  <Nav />
+
+  <main class="py-12 lg:py-20">
+      <HomeHeader title={title} description={description} />
+<div>
+    <Form
+    client:load
+    question1 = "Is Python an object-oriented programming language?"
+answer1 = ""
+
+question2 = "Does Python support multiple programming paradigms?"
+answer2 = ""
+    />
+    
+    <div class="flex w-full justify-center items-center mt-4 p-4">
+            <div class="max-w-7xl mx-auto w-full my-8 p-6 bg-paper border rounded-xl shadow-xl">
+              <p class="w-full font-bold text-left text-3xl my-8">
+                {title}
+              </p>
+              <div class="">
+
+<p class="text-xl leading-loose">{text_1}</p>
+<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/ena/1.jpg" width="128"/>
+<p class="text-xl leading-loose">{text_2}</p>
+<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/ena/2.jpg" width="128"/>
+
+</div>
+             </div>
+          </div>
+
+      </section>
+    </article>
+  </main>
+</body>
