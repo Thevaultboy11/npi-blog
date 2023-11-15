@@ -1,0 +1,58 @@
+---
+import BaseHead from '../../components/Head/BaseHead.astro';
+import Nav from '../../components/Nav.astro';
+import HomeHeader from '../../components/HomeHeader.astro';
+import Card from '../../components/Card.astro';
+import Footer from '../../components/Footer/Footer.astro';
+import  '../../styles/main.scss';
+import Form from '../../components/Form'
+const meta = {
+  title: "Starship Shield Hybrid Assessment",
+};
+
+const description = 'Projekat od Ucenika III-5';
+const seoDescription = 'Naučite kako da programirate u 15 minuta';
+const title = `Kako imati dobru ishranu`
+const text_1 = `Lekcija 5. 1: Kreiranje uravnotežene ishrane Definicija uravnotežene ishrane: Uravnotežena ishrana podrazumijeva unos različitih hranljivih materija u odgovarajućim količinama kako bi se osigurali svi potrebni nutrijenti za održavanje zdravlja i dobrobiti. Piramide ishrane: Piramide ishrane su alati koji pomažu u vizualizaciji preporučenih količina različitih grupa hrane u ishrani. To uključuje voće, povrće, žitarice, proteine i mliječne proizvode. Varijacija u ishrani: Raznolikost u ishrani je ključna za osiguravanje da tijelo dobije sve potrebne nutrijente. To također pomaže da se izbjegnu monotone dijete i dosada u ishrani. Lekcija 5. 2: Praćenje unosa makronutrijenata Praćenje kalorija i makronutrijenata: Praćenje unosa kalorija i makronutrijenata (ugljikohidrata, proteina, masti) može pomoći da se osigura uravnotežena ishrana i postigne određeni cilj, kao što je mršavljenje ili izgradnja mišića. Alati za praćenje: Postoje razni alati i aplikacije koji olakšavaju praćenje unosa kalorija i makronutrijenata, kao što su MyFitnessPal i slični resursi. Lekcija 5.`
+const text_2 = `Planiranje obroka prema makronutrijentima Planiranje obroka: Planiranje obroka prema makronutrijentima uključuje ravnotežu između unosa ugljikohidrata, proteina i masti kako bi se zadovoljile dnevne potrebe i ciljevi ishrane. Hrana kao gorivo: Ugljikohidrati su brzi izvor energije, proteini su građevinski materijal za tijelo, a masti pružaju dugotrajnu energiju. Razumijevanje ove uloge pomaže u planiranju obroka. Zadatak: Kreiranje Plana Obroka za Dan Zadatak studenata je da kreiraju plan obroka za jedan dan koji će zadovoljiti njihove dnevne energetske i makronutritivne potrebe. Koristite sljedeće informacije: Vaša tjelesna masa: 65 kg Vaš nivo tjelesne aktivnosti: Aktivni ste i vježbate 4-5 puta sedmično. Vaši ciljevi: Održavanje tjelesne mase i podrška tjelesnoj izdržljivosti. Planirajte tri glavna obroka (doručak, ručak i večera) i dva međuobroka. Za svaki obrok, odaberite hranu koja će vam osigurati odgovarajuće količine ugljikohidrata, proteina i masti. Također, osigurajte da unosite dovoljno voća i povrća za unos vitamina i minerala. Nakon što kreirate plan obroka, izračunajte ukupan broj kalorija i makronutrijenata koje ćete unijeti tokom dana i provjerite da li se uklapaju u vaše dnevne potrebe.
+`
+
+---
+<body class="bg-white text-black font-body leading-normal personality-casual">
+  <BaseHead meta={meta} />
+  <Nav />
+
+  <main class="py-12 lg:py-20">
+      <HomeHeader title={title} description={description} />
+<div>
+    <Form
+    client:load
+    question1="What is the most famous long-distance hiking trail in the United States?"
+    answer1="The Appalachian Trail"
+    
+    question2="What is the term for a small backpack used for short day hikes?"
+    answer2="Daypack"
+    
+  />
+    
+    <div class="flex w-full justify-center items-center mt-4 p-4">
+            <div class="max-w-7xl mx-auto w-full my-8 p-6 bg-paper border rounded-xl shadow-xl">
+              <p class="w-full font-bold text-left text-3xl my-8">
+                {title}
+              </p>
+              <div class="">
+
+<p class="text-xl leading-loose">{text_1}</p>
+<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/said/1.jpg" width="128"/>
+
+<p class="text-xl leading-loose">{text_2}</p>
+<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/said/2.jpg" width="128"/>
+
+</div>
+             </div>
+          </div>
+
+      </section>
+    </article>
+  </main>
+</body>

@@ -1,0 +1,56 @@
+---
+import BaseHead from '../../components/Head/BaseHead.astro';
+import Nav from '../../components/Nav.astro';
+import HomeHeader from '../../components/HomeHeader.astro';
+import Card from '../../components/Card.astro';
+import Footer from '../../components/Footer/Footer.astro';
+import  '../../styles/main.scss';
+import Form from '../../components/Form'
+const meta = {
+  title: "Starship Shield Hybrid Assessment",
+};
+
+const description = 'Projekat od Ucenika III-5';
+const seoDescription = 'Naučite kako da programirate u 15 minuta';
+const title = `Kurs o biciklizmu`
+const text_1 = `**KURS O BICIKLIZMU****Zašto je biciklizam zdrav i zabavan kao hobi?****Biciklizam** je predivan hobi koji spaja fizičku aktivnost, prirodu i osjećaj slobode. Međutim, kao i kod većine hobija, biciklizam može donijeti i neke izazove. ***Poznate ličnosti u svijetu biciklizma:*** Svijet biciklizma obiluje poznatim biciklistima koji su ostavili neizbrisiv trag svojim izvanrednim postignućima. Jedno od najpoznatijih imena je Lance Armstrong, sedmerostruki osvajač Tour de Francea, čija je karijera obilježena i kontroverzama zbog dopinga. Tu je i Eddy Merckx, poznat kao "Kannibal" zbog svoje nezasitne pobjedničke želje, osvajač pet Tour de Francea i niz drugih prestižnih utrka. Nedavno, Chris Froome, britanski biciklist, osvojio je više Tour de France naslova, dok je Peter Sagan iz Slovačke poznat po svojoj vještini na brdima i sprintu. Ovi biciklisti su inspiracija svima i dokaz da posvećenost, talent i trud mogu dovesti do izvanrednih sportskih uspjeha.**Video material** – ukratko o hobiju: [Casually Explained: Cycling - YouTube](https://www.youtube.com/watch?v=5EE8m8mmq1k)***PROBLEMI KOJI SE MOGU JAVITI KOD OVOG HOBIJA:*****Prvi problem** s kojim se biciklisti često suočavaju jest sigurnost u prometu. Sudjelovanje u gusto naseljenim urbanim prometima može biti opasno, a biciklisti su izloženi riziku od sudara s vozilima. Rješenje za ovaj problem je pridržavanje prometnih pravila, nošenje odgovarajuće sigurnosne opreme poput kacige i reflektirajuće odjeće te vožnja na biciklističkim stazama ili manje prometnim cestama kad god je to moguće. Također, svijest i obazrivost vozača i biciklista igraju ključnu ulogu u očuvanju sigurnosti na cestama.**Drugi problem** je održavanje bicikla. Bicikli zahtijevaju redovito održavanje kako bi ostali u dobrom stanju. Gume, kočnice, lanac i ostali dijelovi bicikla trebaju pažljivo praćenje i često podmazivanje. Rješenje za ovaj problem je redovito servisiranje bicikla u lokalnoj biciklističkoj radnji ili učenje osnovnih vještina popravka i održavanja bicikla. To će produžiti vijek trajanja bicikla i osigurati sigurnu i ugodnu vožnju.**Treći problem** koji biciklisti često doživljavaju su vremenski uvjeti. Kiša, vjetar, sunce ili čak snijeg mogu biti izazovni za bicikliste. Rješenje za ovaj problem je priprema i prilagodba. Nošenje odgovarajuće odjeće i opreme za zaštitu od vremena, planiranje vožnji prema vremenskoj prognozi i vožnja na manje prometnim cestama u lošim vremenskim uvjetima pomoći će biciklistima da se nosi s prirodnim izazovima.Na kraju, problem koji mnogi biciklisti doživljavaju je **krađa bicikala**. Bicikli su često vrijedni, a njihova krađa može biti velika neugodnost. Rješenje za ovaj problem uključuje upotrebu kvalitetnih lokota i lanaca za bicikle, parkiranje bicikla na sigurnim mjestima, kao i registraciju bicikla kod lokalnih vlasti kako bi ga lakše vratili u slučaju krađe.**Video material – krađa bicikala:** [Watch How Long It Takes For A Thief To Snatch A Locked Bicycle - YouTube](https://www.youtube.com/watch?v=LxhsFAKOdF8)Iako postoje izazovi u biciklizmu, s pravilnim znanjem, oprezom i pripremom, većina tih problema može se prevladati, omogućujući biciklistima da nastave uživati u ovom divnom hobiju. Biciklizam ostaje izvanredan način da istražite svijet oko sebe i ostanete fizički aktivni, bez obzira na sve prepreke. ***Šta mislite:***1. Kako pridržavanje prometnih pravila može poboljšati sigurnost biciklista u prometu?1. Koja je važnost nošenja sigurnosne opreme, poput kacige i reflektirajuće odjeće, za bicikliste?1.`
+const text_2 = `biciklista?1. Koje su osnovne vještine održavanja bicikla koje bi trebali naučiti biciklisti?1. Zašto je redovito podmazivanje lanca i guma bitno za očuvanje bicikla?1. Kako biciklisti mogu se pripremiti za vožnju u različitim vremenskim uvjetima?1. Koja je važnost planiranja biciklističkih ruta prema vremenskoj prognozi?1. Kako trening i tehnike kondicijskog treninga mogu poboljšati sposobnosti biciklista?1. Kako biciklizam promiče održivost i doprinosi očuvanju okoliša?`
+
+---
+<body class="bg-white text-black font-body leading-normal personality-casual">
+  <BaseHead meta={meta} />
+  <Nav />
+
+  <main class="py-12 lg:py-20">
+      <HomeHeader title={title} description={description} />
+<div>
+    <Form
+    client:load
+    question1="What is the most famous long-distance hiking trail in the United States?"
+    answer1="The Appalachian Trail"
+    
+    question2="What is the term for a small backpack used for short day hikes?"
+    answer2="Daypack"
+    
+  />
+    
+    <div class="flex w-full justify-center items-center mt-4 p-4">
+            <div class="max-w-7xl mx-auto w-full my-8 p-6 bg-paper border rounded-xl shadow-xl">
+              <p class="w-full font-bold text-left text-3xl my-8">
+                {title}
+              </p>
+              <div class="">
+
+<p class="text-xl leading-loose">{text_1}</p>
+<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/damir/1.jpg" width="128"/>
+<p class="text-xl leading-loose">{text_2}</p>
+<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/damir/2.jpg" width="128"/>
+
+</div>
+             </div>
+          </div>
+
+      </section>
+    </article>
+  </main>
+</body>

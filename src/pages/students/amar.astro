@@ -1,0 +1,54 @@
+---
+import BaseHead from '../../components/Head/BaseHead.astro';
+import Nav from '../../components/Nav.astro';
+import HomeHeader from '../../components/HomeHeader.astro';
+import Card from '../../components/Card.astro';
+import Footer from '../../components/Footer/Footer.astro';
+import  '../../styles/main.scss';
+import Form from '../../components/Form'
+const meta = {
+  title: "Starship Shield Hybrid Assessment",
+};
+
+const description = 'Projekat od Ucenika III-5';
+const seoDescription = 'Naučite kako da programirate u 15 minuta';
+const title = `Kurs o Fudbalu`
+const text_1 = `Kurs o FUDBALU! 1. Uvod u fudbal    • Šta je fudbal?    • Fudbal je globalni timski sport koji se igra između dva tima, svaki sa jedanaest igrača na terenu. Cilj igre je postizanje golova tako što se lopta gura ili šutira u protivnički gol, koristeći samo noge i glavu, osim za golmane koji mogu koristiti ruke unutar svog šesnaesterca.    • Beginner’s guide to football | Football for dummies - YouTube    • Istorija fudbala        ◦ Istorija fudbala seže unazad vekovima, s obzirom na slične igre koje su se igrale u različitim kulturama. Međutim, moderni fudbal je razvio svoja pravila u Engleskoj sredinom 19. veka. Danas je fudbal jedan od najpopularnijih sportova na svetu.        ◦ The History of Football in 10 Minutes - YouTube    • Popularnost fudbala širom sveta        ◦ Popularnost fudbala širom sveta je izuzetna. FIFA Svetsko prvenstvo, koje se održava svakih četiri godine, okuplja najbolje timove iz različitih zemalja i privlači milijarde gledalaca širom sveta. Klupske lige poput Lige šampiona i engleske Premier lige takođe imaju ogroman broj fanova i prate se strastveno. Fudbal ima moć da ujedini ljude i predstavlja deo globalne kulture. 2. Pravila i regulacije    • Rules of Soccer : Soccer Rules and Regulations - YouTube    • Dimenzije terena        ◦ Dimenzije terena: Standardne dimenzije fudbalskog terena variraju, ali obično su oko 100-130 metara u dužinu i 64-75 metara u širinu. Teren se deli na dve polovine i ima golove na svakom kraju. Broj igrača u timu    • Pravila o ofsajdu        ◦ Pravila o ofsajdu: Pravilo ofsajda ograničava gde igrač može biti u trenutku kada mu se dodaje lopta od strane saigrača. Igrač se smatra u ofsajdu ako se nalazi bliže protivničkom golu od lopte i pretposlednjeg protivničkog igrača u trenutku kada mu se lopta dodaje.    • Broj igraca u timu        ◦ Broj igrača u timu: U fudbalu svaki tim ima 11 igrača na terenu istovremeno, uključujući golmana. Tim takođe obično ima rezervne igrače na klupi, koji mogu ući u igru tokom zamena.    • Kartoni (žuti i crveni)        ◦ Kartoni (žuti i crveni): Sudije koriste kartone da kažnjavaju igrače za nedolično ponašanje ili prekršaje. Žuti karton se obično dodeljuje za manje prekršaje, dok crveni karton znači isključenje igrača iz igre, često zbog grubih prekršaja, nesportskog ponašanja ili višestrukog dobijanja žutih kartona.    • Sudije i asistenti        ◦ Sudije i asistenti: Svaka fudbalska utakmica ima glavnog sudiju, koji je odgovoran za primenu pravila i odlučivanje o prekršajima. Pomažu mu asistenti sudija koji prate ofsajde i druge aspekte igre.    • Dužina utakmice        ◦ Dužina utakmice: Standardna fudbalska utakmica se sastoji od dva poluvremena, obično traju po 45 minuta, sa pauzom između poluvremena. U nekim ligama i takmičenjima, produžeci se igraju ako je rezultat nerešen, a ako i dalje nema pobednika, odlučuje se penali.        ◦ 3. Oprema i teren    • Lopta        ◦ Lopta: Fudbalska lopta je obično okrugla, napravljena od kože ili sintetičkog materijala, i punjena vazduhom. Standardna težina i veličina lopte varira, ali FIFA (Međunarodna fudbalska federacija) postavlja specifikacije za profesionalne mečeve. Fudbalske lopte se koriste za izvođenje različitih tehnika, uključujući driblanje, šutiranje, i dodavanje.        ◦     • Dresovi i kopačke        ◦ Dresovi i kopačke: Igrači nose dresove koji označavaju njihov tim, obično sa brojevima i imenima igrača na leđima. Dresovi se obično prilagođavaju bojama i dizajnu tima. Kopačke (fudbalski čevlji) su posebno dizajnirane za fudbal i obezbeđuju dobar trakciju na terenu. Materijali i stilovi kopački se razlikuju i često zavise od površine na kojoj se igra, bilo da je to prirodna trava, veštačka trava ili dvoranski teren.    • Golovi i mreže        ◦ Golovi i mreže: Cilj igre je postizanje golova tako što ćete loptu ubaciti u protivnički gol. Standardni golovi su pravougaonog oblika i obično su dimenzionisani prema standardima FIFA-e. Na zadnjem delu gola se nalazi mreža koja pomaže da se lopta uhvati kada se postigne gol.    • Drugi rekviziti        ◦ Drugi rekviziti: Pored lopte, dresova i kopački, na terenu se koriste i drugi rekviziti kao što su zastave za korner i ofsajd, flaše sa vodom za hidrataciju igrača, ozvučenje za komunikaciju sa sudijama i ostalim rekvizitima potrebnim za vođenje igre. Takođe, golmani obično nose posebnu opremu kao što su rukavice i štitnici za telo.`
+const text_2 = `9. Razvoj karijere u fudbalu Omladinski fudbal Omladinski fudbal: Omladinski fudbal je nivo igre gde mladi fudbaleri razvijaju svoje veštine i igraju u mlađim kategorijama. Omladinske lige i akademije služe kao ključna platforma za razvoj budućih profesionalnih igrača. Mladim talentima se pružaju prilike za napredak i sticanje iskustva pre nego što pređu u seniorke timove. Prijavljivanje za profesionalne lige Prijavljivanje za profesionalne lige: Prijavljivanje za profesionalne fudbalske lige zahteva talent, posvećenost i naporan rad. Igrači obično prolaze kroz proces proba i testiranja u akademijama i mladim timovima profesionalnih klubova. Uspešni igrači potom potpisuju profesionalne ugovore i postaju članovi prvih timova. Rad sa agentima i menadžerima Rad sa agentima i menadžerima: Profesionalni fudbaleri često angažuju agente ili menadžere koji ih zastupaju u pregovorima o ugovorima, prenosima i marketinškim aktivnostima. Agenti i menadžeri igraju ključnu ulogu u upravljanju karijerom igrača, pronalaženju klubova i obezbeđivanju najboljih uslova za njih. Ovaj odnos zahteva poverenje i saradnju između igrača i njihovih zastupnika. 10. Zabava i navijanje Navijanje na utakmicama Navijanje na utakmicama: Navijanje na fudbalskim utakmicama je strastveno podržavanje svog omiljenog tima. Navijači koriste rekvizite, pevaju pesme, mašu zastavama i stvaraju atmosferu punu uzbuđenja i energije na stadionu. Navijanje je važan deo fudbalske kulture i često je praćeno transparentima, skandiranjem i podrškom igračima. Praćenje Svetskog prvenstva i drugih velikih turnira Praćenje Svetskog prvenstva i drugih velikih turnira: Svetsko prvenstvo i drugi veliki fudbalski turniri okupljaju ljude širom sveta da prate najbolje igrače i timove kako se takmiče za prestižne nagrade. Tokom takvih događaja, navijači prate utakmice putem televizije, interneta ili prisustvuju mečevima na stadionima kako bi bodrili svoje favorite. Fudbalske igre i simulacije Fudbalske igre i simulacije: Fudbalske video igre i simulacije su popularan način da se doživi uzbuđenje fudbala bez potrebe za fizičkim učestvovanjem na terenu. Igrači mogu igrati virtualne utakmice, kontrolisati timove i igrače, i takmičiti se online sa drugim igračima. Fudbalske igre često prate aktuelne timove, igrače i turnire, omogućavajući ljubiteljima sporta da budu deo virtuelnog fudbalskog sveta.  `
+---
+<body class="bg-white text-black font-body leading-normal personality-casual">
+  <BaseHead meta={meta} />
+  <Nav />
+
+  <main class="py-12 lg:py-20">
+      <HomeHeader title={title} description={description} />
+<div>
+    <Form
+    client:load
+    question1="What is the most famous long-distance hiking trail in the United States?"
+    answer1="The Appalachian Trail"
+    
+    question2="What is the term for a small backpack used for short day hikes?"
+    answer2="Daypack"
+    
+  />
+    
+    <div class="flex w-full justify-center items-center mt-4 p-4">
+            <div class="max-w-7xl mx-auto w-full my-8 p-6 bg-paper border rounded-xl shadow-xl">
+              <p class="w-full font-bold text-left text-3xl my-8">
+                {title}
+              </p>
+              <div class="">
+
+<p class="text-xl leading-loose">{text_1}</p>
+<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/amar/1.jpg" width="128"/>
+<p class="text-xl leading-loose">{text_2}</p>
+<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/amar/2.jpg" width="128"/>
+</div>
+             </div>
+          </div>
+
+      </section>
+    </article>
+  </main>
+</body>

@@ -1,0 +1,56 @@
+---
+import BaseHead from '../../components/Head/BaseHead.astro';
+import Nav from '../../components/Nav.astro';
+import HomeHeader from '../../components/HomeHeader.astro';
+import Card from '../../components/Card.astro';
+import Footer from '../../components/Footer/Footer.astro';
+import  '../../styles/main.scss';
+import Form from '../../components/Form'
+const meta = {
+  title: "Starship Shield Hybrid Assessment",
+};
+
+const description = 'Projekat od Ucenika III-5';
+const seoDescription = 'Naučite kako da programirate u 15 minuta';
+const title = `Kako postati FORTNITE igrac`
+const text_1 = `Kurs o Fortnite-uLekcija 1: Uvod u FortniteFortnite je popularna igra battle royale koja je osvojila milijune igrača širom svijeta. Iako je danas Fortnite sinonim za video igre, mnogi igrači ne znaju mnogo o povijesti ove igre. Fortnite je razvijen i izdan od strane Epic Games-a, a prva verzija igre je objavljena 2017. godine. Igra je dostupna na različitim platformama, uključujući PC, konzole i mobilne uređaje. Osnovne mehanike igre uključuju skakanje s padobranom na otok, prikupljanje resursa za gradnju struktura, pronalaženje oružja i opreme te borbu protiv drugih igrača dok se zona smanjuje tijekom vremena. Fortnite se odlikuje svojim karikaturalnim stilom i brzim tempom, što ga čini izazovnom igrom za igrače svih dobnih skupina. Lekcija 2: Postavljanje i PrilagodbaPrije nego što zaronite u svijet Fortnitea, važno je pravilno postaviti igru i prilagoditi postavke prema svojim potrebama. Postupak instalacije igre varira ovisno o platformi na kojoj želite igrati. Nakon instalacije, slijedi korak prilagodbe postavki igre. Ovdje možete prilagoditi grafiku, zvuk, osjetljivost miša/touchpad-a, postavke tastature/controllera i mnoge druge opcije kako biste osigurali najbolje iskustvo igranja. Pravilno postavljanje i prilagodba može značajno utjecati na vašu igračku izvedbu i ugodnost igranja. Također, izbor odgovarajuće periferne opreme kao što su miš, tipkovnica, gamepad ili slušalice također može biti ključan za vaš uspjeh u igri. Lekcija 3: Osnove IgranjaU Fortniteu, osnovne igračke vještine uključuju sposobnost kretanja, ciljanja i borbe. Na otoku se možete kretati pješke, koristiti vozila i graditi strukture koje će vam pomoći u zaštiti i napadu. Pucanje, ciljanje i borba su ključne vještine koje trebate razviti kako biste preživjeli i pobjeđivali druge igrače. Također, važno je razumjeti kako skupljati resurse kao što su drvo, kamen i metal, jer ćete ih koristiti za gradnju. Učenje kako koristiti resurse pametno i efikasno bit će ključ za dugotrajnost u igri.`
+const text_2 = `Lekcija 4: GradnjaGradnja je jedna od najprepoznatljivijih karakteristika Fortnitea. Igrači mogu graditi različite strukture poput zidova, stepenica i krovova kako bi se zaštitili od neprijatelja ili došli do povoljnih pozicija. Brza i pametna gradnja često odlučuje o ishodu borbe. U ovoj lekciji ćete naučiti osnove gradnje, kao i napredne tehnike koje vam omogućuju da postanete vješt graditelj. Razumijevanje kako graditi u različitim situacijama i kako brzo mijenjati između građenja i borbe ključno je za uspjeh u Fortniteu. Lekcija 5: Oružja, Itemi i TaktikeFortnite nudi raznolik arsenal oružja i različite predmete koji igračima pružaju prednost u borbi. U ovoj lekciji ćete istražiti različite tipove oružja, uključujući vatreno oružje, eksplozivne naprave i hladno oružje. Također ćete naučiti kako koristiti različite iteme poput medkitova, bandagea i potrošnih predmeta za brzu izmjenu situacije u igri. Taktike su ključne za preživljavanje i pobjedu u Fortniteu. Ovdje ćete proučiti različite taktike i strategije koje možete primijeniti u različitim situacijama, uključujući kako se kretati po otoku, kako se boriti protiv neprijatelja i kako se pravilno koristiti svojim oružjem i itemima. Nadam se da vam ovi sažeci pomažu u razumijevanju osnovnih koncepata i vještina u Fortniteu. Ako želite više detalja o bilo kojoj od ovih tema, slobodno pitajte. Lekcija 6: Timski Igranje i KomunikacijaFortnite nudi igračima mogućnost igranja u timovima, bilo da se radi o dvoje igrača ili većem broju članova. Timski način igre zahtijeva različite vještine i strategije nego solo igranje. U ovoj lekciji ćete naučiti kako se učinkovito uskladiti s timom, komunicirati s članovima tima i koordinirati akcije kako biste postigli zajednički cilj - pobjedu. Komunikacija je ključna za timsku igru, a Fortnite nudi različite načine komuniciranja, uključujući glasovne chatove i chat poruke. Razumijevanje kako koristiti ove alate i razvijati taktike za timsku igru bit će ključno za uspjeh`
+
+---
+<body class="bg-white text-black font-body leading-normal personality-casual">
+  <BaseHead meta={meta} />
+  <Nav />
+
+  <main class="py-12 lg:py-20">
+      <HomeHeader title={title} description={description} />
+<div>
+    <Form
+    client:load
+    question1="What is the most famous long-distance hiking trail in the United States?"
+    answer1="The Appalachian Trail"
+    
+    question2="What is the term for a small backpack used for short day hikes?"
+    answer2="Daypack"
+    
+  />
+    
+    <div class="flex w-full justify-center items-center mt-4 p-4">
+            <div class="max-w-7xl mx-auto w-full my-8 p-6 bg-paper border rounded-xl shadow-xl">
+              <p class="w-full font-bold text-left text-3xl my-8">
+                {title}
+              </p>
+              <div class="">
+
+<p class="text-xl leading-loose">{text_1}</p>
+<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/daris/1.jpg" width="128"/>
+<p class="text-xl leading-loose">{text_2}</p>
+<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/daris/2.jpg" width="128"/>
+
+</div>
+             </div>
+          </div>
+
+      </section>
+    </article>
+  </main>
+</body>

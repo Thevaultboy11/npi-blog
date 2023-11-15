@@ -1,0 +1,54 @@
+---
+import BaseHead from '../../components/Head/BaseHead.astro';
+import Nav from '../../components/Nav.astro';
+import HomeHeader from '../../components/HomeHeader.astro';
+import Card from '../../components/Card.astro';
+import Footer from '../../components/Footer/Footer.astro';
+import  '../../styles/main.scss';
+import Form from '../../components/Form'
+const meta = {
+  title: "Starship Shield Hybrid Assessment",
+};
+
+const description = 'Projekat od Ucenika III-5';
+const seoDescription = 'Naučite kako da programirate u 15 minuta';
+const title = `Kurs o salesu`
+const text_1 = `Zašto se bavim prodajom? Prodaja mi omogućava da usavršavam svoje veštine pregovaranja i persuazije. Jedan od mojih uzora je Grantom Cardonom, on se najviše fokusira na važnost samopouzdanja i upornosti, a da nisam previše naporan. On je specifičan zato što je stručan u tome kako da pridobijemo pažnju klijenata, istražimo njihove potrebe i ponudimo rešenje koje će im donijeti koristi. A naravno, osim svega navedenog, tu postoji i osjećaj zadovoljstva kada prodam nešta, i naravno, kad se zaradi novac. Zašto je prodaja važna? Prodaja ima ogroman značaj ne samo u poslovnom svetu, već i u našem privatnom životu. Ova veština omogućava nam da ostvarimo uspešne komunikacijske veze, bilo da prodajemo proizvode, usluge ili čak svoje ideje. U poslovnom kontekstu, prodaja je temelj uspešnog poslovanja jer omogućava generisanje prihoda, stvaranje lojalnih kupaca i izgradnju brenda.`
+const text_2 = `Ko su najpoznatiji likovi u prodajnom svijetu? Jordan Belfort i Grant Cardone su dvojica prodajnih stručnjaka koji su se istakli svojim izvanrednim veštinama i postignućima. Jordan Belfort, poznat kao Vuk sa Wall Streeta, bio je majstor u veštini pregovaranja i persuazije. Njegova sposobnost da motiviše svoje timove i prodaje visokotehnološke akcije činila ga je ikonom u svetu prodaje. S druge strane, Grant Cardone je postao poznat po svojim knjigama i seminarima o prodaji. Njegova posvećenost, upornost i sposobnost postavljanja ciljeva su ga lansirali u vrh prodajne industrije. Jordan Bellford Jordan Belfort je postao poznat kao "Vuk sa Wall Streeta" zbog svojih izuzetnih uspeha u svetu finansija i prodaje. Rođen 1962. godine, Belfort je izgradio svoju karijeru kao broker na Wall Streeta, a njegova sposobnost pregovaranja i persuazije ga je izdvojila među vršnjacima.`
+---
+<body class="bg-white text-black font-body leading-normal personality-casual">
+  <BaseHead meta={meta} />
+  <Nav />
+
+  <main class="py-12 lg:py-20">
+      <HomeHeader title={title} description={description} />
+<div>
+    <Form
+    client:load
+    question1="What skills does effective salesmanship require?"
+    answer1="Effective salesmanship requires strong communication, active listening, empathy, adaptability, and relationship-building skills."
+    
+    question2="How important is confidence in the field of sales?"
+    answer2="Confidence is crucial in sales, instilling trust in clients and team members, and influencing positive outcomes."
+    
+  />
+    
+    <div class="flex w-full justify-center items-center mt-4 p-4">
+            <div class="max-w-7xl mx-auto w-full my-8 p-6 bg-paper border rounded-xl shadow-xl">
+              <p class="w-full font-bold text-left text-3xl my-8">
+                {title} 
+              </p>
+              <div class="">
+
+<p class="text-xl leading-loose">{text_1}</p>
+<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/almir/1.jpg" width="128"/>
+<p class="text-xl leading-loose">{text_2}</p>
+<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/almir/2.jpg" width="128"/>
+</div>
+             </div>
+          </div>
+
+      </section>
+    </article>
+  </main>
+</body>

@@ -1,0 +1,56 @@
+---
+import BaseHead from '../../components/Head/BaseHead.astro';
+import Nav from '../../components/Nav.astro';
+import HomeHeader from '../../components/HomeHeader.astro';
+import Card from '../../components/Card.astro';
+import Footer from '../../components/Footer/Footer.astro';
+import  '../../styles/main.scss';
+import Form from '../../components/Form'
+const meta = {
+  title: "Starship Shield Hybrid Assessment",
+};
+
+const description = 'Projekat od Ucenika III-5';
+const seoDescription = 'Naučite kako da programirate u 15 minuta';
+const title = `Kurs o Snimanju`
+const text_1 = `KURS 3DSMAXOSNOVNI MODELI1.  Instalacija 3ds Max:    -   Prvo morate preuzeti i instalirati 3ds Max na vašem računalu.        Slijedite upute koje dolaze s instalacijskim datotekama ili ih        pronađite na službenoj web stranici Autodesk. 2.  Pokretanje 3ds Max:    -   Nakon instalacije, pokrenite 3ds Max iz programa ili ikone na        radnoj površini. 3.  Otvorite novi projekt:    -   Kliknite na \"File\" (Datoteka) u glavnom izborniku i odaberite        \"New\" (Novo) kako biste stvorili novi projekt. 4.  Pregled sučelja:    -   3ds Max ima složeno sučelje s mnogo alatki i opcija. Pregledajte        prozore za rad, alatne trake i kontrole kako biste se upoznali s        njima. 5.  Izbor alatke za modeliranje:    -   3ds Max ima različite alatke za modeliranje, uključujući        \"Create\" (Stvaranje), \"Modify\" (Izmjena) i \"Editable Poly\"        (Uredivi poligon) alatke. Odaberite alatku koju želite koristiti        za svoj model. 6.  Kreiranje oblika:    -   Koristite alatke za crtanje, kao što su \"Box\" (Kutija),        \"Sphere\" (Sfera) ili \"Cylinder\" (Cilindar) kako biste        stvorili osnovni oblik za svoj model. Dvoklikom na alatku        otvarate postavke kako biste prilagodili oblik. 7.  Editiranje modela:    -   Nakon što stvorite osnovni oblik, koristite alatke poput        \"Move\" (Pomakni), \"Rotate\" (Rotiraj) i \"Scale\" (Skaliraj)        kako biste oblikovali i uređivali svoj model prema svojim        potrebama. 8.  Prilagodba materijala i tekstura:    -   Dodajte boje, teksture i materijale svom modelu kako biste mu        dali željeni izgled. Koristite \"Material Editor\" (Uređivač        materijala) za dodavanje i uređivanje materijala. 9.  Dodavanje svjetla i kamera:    -   Postavite svjetla kako biste osvijetlili svoj model i postavite        kameru kako biste definirali perspektivu za renderiranje. 10. Renderiranje:    -   Kada ste zadovoljni svojim modelom, možete renderirati sliku ili        animaciju. Odaberite opciju \"Render\" u glavnom izborniku i        prilagodite postavke renderiranja. 11. Spremanje projekta:    -   Spremite svoj projekt u 3ds Max formatu kako biste ga mogli        ponovno uređivati u budućnosti. Također, možete izvesti model u        drugim formatima, kao što su . obj, . fbx ili . 3ds, ako želite        koristiti model u drugim aplikacijama. NAPREDNI MODELI1.  Otvorite ili stvorite projekt:    -   Pokrenite 3ds Max i otvorite postojeći projekt ili stvorite novi        projekt, kako sam objasnio u prethodnom odgovoru. 2.  Odaberite alatke za modeliranje:    -   U glavnom izborniku 3ds Max-a odaberite \"Create\" (Stvaranje)        ili \"Shapes\" (Oblici) alatku. Ovisno o vašim potrebama, možete        koristiti \"Editable Poly\" (Uredivi poligon) alatku ili        \"Editable Mesh\" (Uredivi mrežu). 3.  Stvaranje osnovnih poligona:    -   Koristite alatke za crtanje kao što su \"Box,\" \"Sphere,\"        \"Cylinder,\" \"Plane,\" ili \"Polygon\" kako biste stvorili        osnovne geometrijske oblike (kutije, sfere, cilindre, ravne        površine ili poligone). 4.  Uređivanje poligona:    -   Odaberite poligone koje ste stvorili i koristite \"Editable        Poly\" ili \"Editable Mesh\" alatke za uređivanje. Možete        pomicati, rotirati, skalirati, extrudirati, spajati i razdvajati        poligone kako biste oblikovali svoj model. 5.  Dodavanje detalja:    -   Koristite alatke za uređivanje kako biste dodali dodatne detalje        na vaš model. Na primjer, možete koristiti \"Cut\" (Reži) alatku        kako biste stvorili nove bridove ili \"Chamfer\" (Zaravnaj) kako        biste zaoblili bridove. 6.  Prilagodba materijala i tekstura:    -   Dodajte boje, teksture i materijale svom modelu kako biste mu        dali željeni izgled koristeći \"Material Editor. \"7.  Dodavanje svjetla i kamere:    -   Postavite svjetla kako biste osvijetlili svoj model i postavite        kameru kako biste definirali perspektivu za renderiranje. 8.  Renderiranje:    -   Kada ste zadovoljni svojim modelom, možete renderirati sliku ili        animaciju. Odaberite opciju \"Render\" u glavnom izborniku i        prilagodite postavke renderiranja. 9.  Spremanje projekta:    -   Spremite svoj projekt u 3ds Max formatu ili izvezi model u        drugim formatima prema svojim potrebama. OSVJETLJENJE1.  Standardna svjetla:    -   3ds Max sadrži različite vrste svjetala, kao što su \"Standard        Lights\" (Standardna svjetla), \"Photometric Lights\"        (Fotometrijska svjetla) i \"Daylight\" (Dnevna svjetla).    -   Kako biste dodali standardna svjetla: a.`
+const text_2 = `liknite na \"Create\"        (Stvaranje) u glavnom izborniku. b. Odaberite željeni tip        svjetla, na primjer, \"Omni Light\" (Omni svjetlo) za svjetlo        koje emitira iz svih smjerova. c. Postavite svjetlo u sceni i        prilagodite njegove postavke poput boje, intenziteta i dosega. 2.  Prirodno svjetlo:    -   Da biste postavili prirodno svjetlo kao sunce i nebo, možete        koristiti \"Daylight System\": a. Kliknite na \"Systems\"        (Sustavi) u glavnom izborniku. b. Odaberite \"Daylight\" (Dnevna        svjetla). c. Podešavajte postavke za vrijeme dana, datum i        geografsku lokaciju kako biste simulirali prirodno svjetlo. 3.  IBL (Image-Based Lighting):    -   IBL koristi HDR slike za osvjetljenje vašeg modela. Da biste        postavili IBL: a. Kliknite na \"Rendering\" (Renderiranje) u        glavnom izborniku. b. Odaberite \"Environment\" (Okolina). c. U        odjeljku \"Background\" (Pozadina), dodajte HDR sliku koja će se        koristiti za osvjetljenje. 4.  Mental Ray i Arnold:    -   Ako koristite Mental Ray ili Arnold renderere u 3ds Maxu, ovi        rendereri nude napredne postavke osvjetljenja i omogućuju        precizniju kontrolu. 5.  Aplikacija materijala i tekstura:    -   Materijali i teksture također igraju važnu ulogu u osvjetljenju.        Dodavanje refleksija, sjaja, difuznosti i drugih svojstava        materijala može utjecati na način na koji se svjetlo reflektira        i razbija na površini vaših modela. 6.  Testiranje i renderiranje:    -   Nakon što postavite svjetla i materijale, preporuča se testirati        osvjetljenje tako da renderirate nekoliko slika i prilagodite        postavke kako biste postigli željeni izgled. POZICIONIRANJE KAMERA I RENDER1.  Selektirajte kameru:    -   Ako već imate kameru u sceni, selektirajte je tako da kliknete        na nju u prikazu \"Viewports. \" Ako nemate kameru u sceni,        možete je stvoriti na sljedeći način: a. Kliknite na \"Create\"        (Stvaranje) u glavnom izborniku. b. Odaberite \"Cameras\"        (Kamere) i zatim odaberite tip kamere koji želite stvoriti, na        primjer, \"Target\" (Meta) kamera. 2.  Prikaz kamere:    -   Da biste promijenili prikaz kamere, selektirajte kameru i        pritisnite \"C\" na tipkovnici ili odaberite \"View\" (Pogled) u        glavnom izborniku, a zatim \"Cameras\" (Kamere) i odaberite        kameru koju želite gledati. 3.  Podešavanje kamere:    -   Pomoću alatki \"Move\" (Pomakni), \"Rotate\" (Rotiraj) i        \"Zoom\" (Udalji) možete podesiti poziciju i orijentaciju        kamere. Evo kako to možete učiniti: a. Selektirajte kameru. b.        Koristite alatke za pomak, rotaciju i povećanje kako biste        podesili položaj i orijentaciju kamere. Za precizniju kontrolu,        možete koristiti i numeričke vrijednosti. 4.  Postavljanje cilja kamere (za \"Target\" kamere):    -   Ako koristite \"Target\" kameru, važno je postaviti cilj kamere        kako bi kamera gledala na određenu točku u sceni. Evo kako to        možete učiniti: a. Selektirajte kameru. b. Kliknite na ikonu        cilja kamere. c. Pomoću alatki za pomak, postavite cilj kamere        na željenu točku u sceni. 5.  Podešavanje parametara kamere:    -   Možete prilagoditi razne parametre kamere, kao što su vidno        polje (FOV), fizički broj blende, izobličenje objektiva i drugi        parametri. To možete učiniti pomoću \"Modify\" (Izmjena) panela        nakon selektiranja kamere. 6.  Testiranje i prilagodba:    -   Nakon što pozicionirate kameru, preporučuje se testiranje        kamerinih postavki i pomicanje kamere kako biste postigli        željeni kut gledanja. Renderiranje scena sa različitim        postavkama kamere pomoći će vam da bolje razumijete kako će        scena izgledati.`
+
+---
+<body class="bg-white text-black font-body leading-normal personality-casual">
+  <BaseHead meta={meta} />
+  <Nav />
+
+  <main class="py-12 lg:py-20">
+      <HomeHeader title={title} description={description} />
+<div>
+    <Form
+    client:load
+    question1="What is the most famous long-distance hiking trail in the United States?"
+    answer1="The Appalachian Trail"
+    
+    question2="What is the term for a small backpack used for short day hikes?"
+    answer2="Daypack"
+    
+  />
+    
+    <div class="flex w-full justify-center items-center mt-4 p-4">
+            <div class="max-w-7xl mx-auto w-full my-8 p-6 bg-paper border rounded-xl shadow-xl">
+              <p class="w-full font-bold text-left text-3xl my-8">
+                {title}
+              </p>
+              <div class="">
+
+<p class="text-xl leading-loose">{text_1}</p>
+<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/emir/1.jpg" width="128"/>
+<p class="text-xl leading-loose">{text_2}</p>
+<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/emir/2.jpg" width="128"/>
+
+</div>
+             </div>
+          </div>
+
+      </section>
+    </article>
+  </main>
+</body>

@@ -9,12 +9,59 @@ interface MarkdownFrontmatter {
   date: number;
 }
 
-const title = 'C++ Kurs za počentnike';
+const title = 'Kako da tvoj Hobij zazivi';
 const description = 'Projekat od Učenika III-5';
 const seoDescription = 'Naučite kako da programirate u 15 minuta.';
 
 const allPosts = await Astro.glob<MarkdownFrontmatter>('./posts/*.md');
 const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf());
+const courses = [
+  {
+    title: "Planinarenje",
+    creator: "Eman Catic",
+    link: "/students/emanc"
+  },
+  {
+    title: "Kako voziti biciklo",
+    creator: "Damir Ahmetovic",
+    link: "/students/damir"
+  },
+  {
+    title: "Kako igrati fornajt",
+    creator: "Daris Gadzcanin",
+    link: "/students/daris"
+  },
+  
+  {
+    title: "Kako postati audio inzinjer",
+    creator: "Tarik Alagic",
+    link: "/students/tarik"
+  },
+  {
+    title: "Kako nauciti audacity",
+    creator: "Emire Karisalihovic",
+    link: "/students/emir"
+  }, {
+    title: "Kako se hraniti zdravo",
+    creator: "Said Halilovic",
+    link: "/students/said"
+  }, {
+    title: "Kako nauciti jezik",
+    creator: "Haris bilajac",
+    link: "/students/harisb"
+  },
+  {
+    title: "Kako biti futbaler",
+    creator: "Amar Huskic",
+    link: "/students/amar"
+  },
+  {
+    title: "Kako biti strijelac",
+    creator: "Haris karadzus",
+    link: "/students/harisk"
+  },
+  
+  ]
 ---
 
 <html lang="en">
@@ -30,18 +77,27 @@ const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.pubDate).valu
     <article class="max-w-6xl mx-auto px-3">
       <HomeHeader title={title} description={description} />
       <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8" data-test="articles-section">
-        {sortedPosts.map(p => <div class="col-span-1">
-          <Card post={p} />
-        </div>)}
+        {courses.map(p => <div class="col-span-6">
+           
+<div class="max-w-2xl mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow ">
+    <svg class="w-7 h-7 text-gray-500 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z"/>
+    </svg>
+    <a href="/template">
+        <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900" set:html={p.title}></h5>
+    </a>
+    <a  href={p.link} class="inline-flex items-center text-blue-600 hover:underline" set:html={p.creator}>
+
+      </a>
+</div>
+
+</div>)}
+
       </section>
     </article>
   </main>
 
-  <section class="flex space-x-8 justify-center text-xl pt-8 font-bold">
-    <a href="/posts" class="mr-8" data-test="see-all-link">
-      Vidite sve<span class="squiggle">&rarr;</span>
-    </a>
-  </section>
+
 
   
 </body>

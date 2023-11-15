@@ -1,0 +1,57 @@
+---
+import BaseHead from '../../components/Head/BaseHead.astro';
+import Nav from '../../components/Nav.astro';
+import HomeHeader from '../../components/HomeHeader.astro';
+import Card from '../../components/Card.astro';
+import Footer from '../../components/Footer/Footer.astro';
+import  '../../styles/main.scss';
+import Form from '../../components/Form'
+const meta = {
+  title: "Starship Shield Hybrid Assessment",
+};
+
+const description = 'Projekat od Ucenika III-5';
+const seoDescription = 'Naučite kako da programirate u 15 minuta';
+const title = `Mountain climbing`
+const text_1 = `Here is the extracted text:"Rock ClimbingRock climbing is a fun and challenging sport that people of all ages and fitness levels can enjoy. If you want to learn how to start rock climbing, you'll find out how in this blog!Odaberite vrstu rock climbingaThere are different types of rock climbing, such as bouldering, top rope climbing, lead climbing, and traditional climbing.Each has its advantages and challenges, requiring different skills and equipment.`
+const text_2 = `Beginners are recommended to start with bouldering or top rope climbing, as they are the easiest and safest ways to get into this sport.Buy the right equipmentDepending on the type of climbing you choose, you will need different equipment to start rock climbing.The most important piece of equipment is climbing shoes, specially designed to fit snugly and provide grip and sensitivity on the rock.You can rent or buy climbing shoes at most gyms or equipment stores. Other equipment you may need includes a harness, belay device, locking carabiner, chalk bag, and helmet.For bouldering, you will also need a crash pad and spotters to protect you. For top rope climbing, you will also need an anchor and a partner who knows how to belay.Learn basic techniquesRock climbing is not just about strength but also about technique and balance.To climb effectively and safely, you will need to learn some basic techniques, such as using your legs, body positioning, handholds, smooth movement, and resting.You can learn these techniques by watching other climbers, taking a course, reading a book, or watching videos.Some of the best resources for learning basic techniques are: Rock Climbing Techniques: Using Your Legs, Rock Climbing Techniques: Body Position and Movement, and Rock Climbing Techniques: Holds, Grips, and Moves.Exercise leads to perfectionThe best way to improve your rock climbing skills is to practice them regularly.You can do this by climbing as often as you can, either in a gym or outdoors. Try climbing different routes of different difficulty levels, styles, and lengths, and challenge yourself to try new movements and problems.You can also do exercises and training to work on specific aspects of your climbing, such as endurance, strength, balance, or flexibility.ProgressAfter mastering the basics of rock climbing, you may want to progress and try new types of climbing, such as lead climbing or traditional climbing.These types of climbing are more advanced and require more skills and equipment, but they also offer more freedom and adventure.Lead climbing involves climbing routes without a fixed rope and attaching your rope to carabiners (metal loops) attached to the rock as you climb.Traditional climbing involves climbing routes without pre-placed protections and placing your own gear (such as nuts and cams) into cracks and holes in the rock as you climb.Rock climbing is a rewarding and exciting sport that can enrich your life in many ways.`
+
+---
+<body class="bg-white text-black font-body leading-normal personality-casual">
+  <BaseHead meta={meta} />
+  <Nav />
+
+  <main class="py-12 lg:py-20">
+      <HomeHeader title={title} description={description} />
+<div>
+    <Form
+    client:load
+    question1="What is the most famous long-distance hiking trail in the United States?"
+    answer1="The Appalachian Trail"
+    
+    question2="What is the term for a small backpack used for short day hikes?"
+    answer2="Daypack"
+    
+  />
+    
+    <div class="flex w-full justify-center items-center mt-4 p-4">
+            <div class="max-w-7xl mx-auto w-full my-8 p-6 bg-paper border rounded-xl shadow-xl">
+              <p class="w-full font-bold text-left text-3xl my-8">
+                {title}
+
+              </p>
+              <div class="">
+
+<p class="text-xl leading-loose">{text_1}</p>
+<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/eman/1.jpg" width="128"/>
+<p class="text-xl leading-loose">{text_2}</p>
+<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/eman/2.jpg" width="128"/>
+
+</div>
+             </div>
+          </div>
+
+      </section>
+    </article>
+  </main>
+</body>
