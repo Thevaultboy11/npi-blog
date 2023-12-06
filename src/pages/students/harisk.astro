@@ -1,73 +1,96 @@
 ---
-import BaseHead from '../../components/Head/BaseHead.astro';
-import Nav from '../../components/Nav.astro';
-import HomeHeader from '../../components/HomeHeader.astro';
-import Card from '../../components/Card.astro';
-import Footer from '../../components/Footer/Footer.astro';
-import  '../../styles/main.scss';
-import Form from '../../components/Form'
+import BaseHead from "../../components/Head/BaseHead.astro";
+import Nav from "../../components/Nav.astro";
+import HomeHeader from "../../components/HomeHeader.astro";
+import Card from "../../components/Card.astro";
+import Footer from "../../components/Footer/Footer.astro";
+import "../../styles/main.scss";
+import Form from "../../components/Form";
 const meta = {
   title: "Starship Shield Hybrid Assessment",
 };
 
-const description = 'Projekat od Ucenika III-5';
-const seoDescription = 'Naučite kako da programirate u 15 minuta';
-const title = `Kako postati strijelac`
-const text_1 = `Tehnika Driblanja  Driblanje je ključna vještina za napadača.  Vježbajte različite vrste driblinga kao što su dribling unutra, dribling napolje, promjena ritma i promjena pravca Pravilna kontrola lopte je osnova driblanja.  Vežbajte svoju kontrolu lopte tako da možete lako prihvatiti loptu i zadržati je blizu noge. Koristiti unutrašnji i spoljni dio stopala: Driblanje može uključivati korišćenje unutrašnjeg i spoljnog dela stopala, zavisno o situaciji. Unutrašnji deo stopala se koristi za preciznije dodavanje i kontrolisanje lopte, dok spoljni deo stopala omogućava brže promene pravca.  Promjena ritma:  Driblanje nije samo brzina, već i sposobnost promene ritma. Ponekad usporavanje ili ubrzavanje može zbuniti protivničke igrače i otvoriti prostor za prolaz.  Promjena pravca:  Vežbajte promenu pravca brzo i iznenada kako biste zaobišli protivničke igrače. Promena pravca može biti ključna za izbegavanje defanzivnih igrača.  Lažni pokreti:  Lažni pokreti i fintiranje mogu dodatno zbuniti protivničke igrače. To uključuje pokrete tela, ramenima, glavom i nogama kako biste izmanipulisali protivnika. Korišćenje tela:  Postavljanje tela između protivničkog igrača i lopte može vam pomoći da zaštitite loptu dok driblate.  Vežbanje sa protivnicima:  Driblanje se najbolje uči vežbanjem sa stvarnim protivničkim igračima. Organizujte treniranje saigračima ili prijateljima kako biste stekli praktično iskustvo.  Vežbe u ograničenom prostoru:   Radite vežbe driblanja u skučenom prostoru kako biste razvili veštinu preciznog driblanja u ograničenim uslovima.  Gledanje profesionalnih igrača:  Praćenje profesionalnih fudbalskih utakmica i pažljivo posmatranje tehniku driblanja vrhunskih igrača može vam pomoći da steknete bolje razumevanje i inspiraciju za svoju tehniku.  Samopouzdanje:  Samopouzdanje je ključno pri driblanju. Verujte u svoje veštine i budite spremni da preuzmete inicijativu na terenu.   Driblanje je veština koja zahteva mnogo vežbe i strpljenja kako bi se postala efikasna. Kombinujući tehniku driblanja sa razumevanjem igre i taktikom, možete postati vrhunski dribler i doprineti uspehu svog tima.                                     Završavanje    Završavanje u fudbalu, ili sposobnost postizanja golova, ključna je veština za napadače.`
+const description = "Projekat od Ucenika III-5";
+const seoDescription = "Naučite kako da programirate u 15 minuta";
+const title = `Kako postati strijelac`;
+const text_1 = `Tehnika Driblanja  Driblanje je ključna vještina za napadača.  Vježbajte različite vrste driblinga kao što su dribling unutra, dribling napolje, promjena ritma i promjena pravca Pravilna kontrola lopte je osnova driblanja.  Vežbajte svoju kontrolu lopte tako da možete lako prihvatiti loptu i zadržati je blizu noge. Koristiti unutrašnji i spoljni dio stopala: Driblanje može uključivati korišćenje unutrašnjeg i spoljnog dela stopala, zavisno o situaciji. Unutrašnji deo stopala se koristi za preciznije dodavanje i kontrolisanje lopte, dok spoljni deo stopala omogućava brže promene pravca.  Promjena ritma:  Driblanje nije samo brzina, već i sposobnost promene ritma. Ponekad usporavanje ili ubrzavanje može zbuniti protivničke igrače i otvoriti prostor za prolaz.  Promjena pravca:  Vežbajte promenu pravca brzo i iznenada kako biste zaobišli protivničke igrače. Promena pravca može biti ključna za izbegavanje defanzivnih igrača.  Lažni pokreti:  Lažni pokreti i fintiranje mogu dodatno zbuniti protivničke igrače. To uključuje pokrete tela, ramenima, glavom i nogama kako biste izmanipulisali protivnika. Korišćenje tela:  Postavljanje tela između protivničkog igrača i lopte može vam pomoći da zaštitite loptu dok driblate.  Vežbanje sa protivnicima:  Driblanje se najbolje uči vežbanjem sa stvarnim protivničkim igračima. Organizujte treniranje saigračima ili prijateljima kako biste stekli praktično iskustvo.  Vežbe u ograničenom prostoru:   Radite vežbe driblanja u skučenom prostoru kako biste razvili veštinu preciznog driblanja u ograničenim uslovima.  Gledanje profesionalnih igrača:  Praćenje profesionalnih fudbalskih utakmica i pažljivo posmatranje tehniku driblanja vrhunskih igrača može vam pomoći da steknete bolje razumevanje i inspiraciju za svoju tehniku.  Samopouzdanje:  Samopouzdanje je ključno pri driblanju. Verujte u svoje veštine i budite spremni da preuzmete inicijativu na terenu.   Driblanje je veština koja zahteva mnogo vežbe i strpljenja kako bi se postala efikasna. Kombinujući tehniku driblanja sa razumevanjem igre i taktikom, možete postati vrhunski dribler i doprineti uspehu svog tima.                                     Završavanje    Završavanje u fudbalu, ili sposobnost postizanja golova, ključna je veština za napadače.`;
 const text_2 = `Ovde su neki ključni aspekti završavanja: Tehnike završavanja: Dobar napadač treba da bude vešt u različitim tehnikama završavanja, uključujući udarce glavom, volej udarce, poluvolej udarce, udarce nogom sa obe noge, i čipovanje lopte. Vežbajte različite tehnike završavanja kako biste bili pripremljeni za različite situacije tokom utakmice. Pozicioniranje: Bitno je znati kako se pravilno pozicionirati u šesnaestercu kako biste bili u pravom trenutku na pravom mestu za postizanje gola. Razmislite o pravilnom kretanju i postavljanju kako biste iskoristili prostor i prilike za završavanje. Preciznost i snaga: Važno je razvijati preciznost i snagu udarca. Vežbajte ciljanje gola i udaranje lopte snažno, kako biste bili u mogućnosti pobediti golmana. Brza reakcija: U nogometu, situacije se brzo menjaju. Dobro završavanje zahteva brze reakcije na loptu i donošenje odluka u deliću sekunde. Vežbajte svoje reakcije kako biste postali efikasan strelac. Rad na glavi: Udarci glavom su važan deo završavanja. Vežbajte tehniku udaranja glavom, uključujući kontrolu lopte i preciznost ciljanja. Razumevanje golmana: Razumevanje načina na koji golmani reaguju na udarce može vam pomoći da ih prevaziđete. Pratite njihov položaj i reakcije kako biste bolje ciljali gornji ili donji deo gola. Mentalna priprema: Završavanje zahteva mentalnu snagu. Imajte samopouzdanje u svoje veštine i budite koncentrisani na cilj. Takođe, budite spremni za neuspehe i znajte da će se promašaji događati, ali je važno da ostanete fokusirani na sledeći udarac. Vežba iz različitih situacija: Da biste bili efikasan napadač, vežbajte završavanje iz različitih situacija - sa različitih pozicija na terenu, iz različitih uglova i pod različitim pritiscima. Analiza i učenje od drugih: Proučavajte i analizirajte vrhunske napadače kako biste naučili iz njihovih veština i pristupa završavanju. Završavanje je veština koja se razvija vremenom i zahteva mnogo vežbe. Kombinujući tehniku završavanja sa pozicioniranjem, snagom i preciznošću, možete postati efikasan strelac i doprineti uspehu svog tima.
-`
-const text_3 = `Završavanje    Završavanje u fudbalu, ili sposobnost postizanja golova, ključna je veština za napadače. Ovde su neki ključni aspekti završavanja: Tehnike završavanja: Dobar napadač treba da bude vešt u različitim tehnikama završavanja, uključujući udarce glavom, volej udarce, poluvolej udarce, udarce nogom sa obe noge, i čipovanje lopte. Vežbajte različite tehnike završavanja kako biste bili pripremljeni za različite situacije tokom utakmice. Pozicioniranje: Bitno je znati kako se pravilno pozicionirati u šesnaestercu kako biste bili u pravom trenutku na pravom mestu za postizanje gola. Razmislite o pravilnom kretanju i postavljanju kako biste iskoristili prostor i prilike za završavanje. Preciznost i snaga: Važno je razvijati preciznost i snagu udarca. Vežbajte ciljanje gola i udaranje lopte snažno, kako biste bili u mogućnosti pobediti golmana. Brza reakcija: U nogometu, situacije se brzo menjaju. Dobro završavanje zahteva brze reakcije na loptu i donošenje odluka u deliću sekunde. Vežbajte svoje reakcije kako biste postali efikasan strelac. Rad na glavi: Udarci glavom su važan deo završavanja. Vežbajte tehniku udaranja glavom, uključujući kontrolu lopte i preciznost ciljanja. Razumevanje golmana: Razumevanje načina na koji golmani reaguju na udarce može vam pomoći da ih prevaziđete. Pratite njihov položaj i reakcije kako biste bolje ciljali gornji ili donji deo gola. Mentalna priprema: Završavanje zahteva mentalnu snagu. Imajte samopouzdanje u svoje veštine i budite koncentrisani na cilj. Takođe, budite spremni za neuspehe i znajte da će se promašaji događati, ali je važno da ostanete fokusirani na sledeći udarac. Vežba iz različitih situacija: Da biste bili efikasan napadač, vežbajte završavanje iz različitih situacija - sa različitih pozicija na terenu, iz različitih uglova i pod različitim pritiscima. Analiza i učenje od drugih: Proučavajte i analizirajte vrhunske napadače kako biste naučili iz njihovih veština i pristupa završavanju. Završavanje je veština koja se razvija vremenom i zahteva mnogo vežbe. Kombinujući tehniku završavanja sa pozicioniranjem, snagom i preciznošću, možete postati efikasan strelac i doprineti uspehu svog tima.`
-const text_4 = `Tehnika Driblanja  Driblanje je ključna vještina za napadača.  Vježbajte različite vrste driblinga kao što su dribling unutra, dribling napolje, promjena ritma i promjena pravca Pravilna kontrola lopte je osnova driblanja.  Vežbajte svoju kontrolu lopte tako da možete lako prihvatiti loptu i zadržati je blizu noge. Koristiti unutrašnji i spoljni dio stopala: Driblanje može uključivati korišćenje unutrašnjeg i spoljnog dela stopala, zavisno o situaciji. Unutrašnji deo stopala se koristi za preciznije dodavanje i kontrolisanje lopte, dok spoljni deo stopala omogućava brže promene pravca.  Promjena ritma:  Driblanje nije samo brzina, već i sposobnost promene ritma. Ponekad usporavanje ili ubrzavanje može zbuniti protivničke igrače i otvoriti prostor za prolaz.  Promjena pravca:  Vežbajte promenu pravca brzo i iznenada kako biste zaobišli protivničke igrače. Promena pravca može biti ključna za izbegavanje defanzivnih igrača.  Lažni pokreti:  Lažni pokreti i fintiranje mogu dodatno zbuniti protivničke igrače. To uključuje pokrete tela, ramenima, glavom i nogama kako biste izmanipulisali protivnika.  Korišćenje tela:  Postavljanje tela između protivničkog igrača i lopte može vam pomoći da zaštitite loptu dok driblate.  Vežbanje sa protivnicima:  Driblanje se najbolje uči vežbanjem sa stvarnim protivničkim igračima. Organizujte treniranje saigračima ili prijateljima kako biste stekli praktično iskustvo.  Vežbe u ograničenom prostoru:   Radite vežbe driblanja u skučenom prostoru kako biste razvili veštinu preciznog driblanja u ograničenim uslovima.  Gledanje profesionalnih igrača:  Praćenje profesionalnih fudbalskih utakmica i pažljivo posmatranje tehniku driblanja vrhunskih igrača može vam pomoći da steknete bolje razumevanje i inspiraciju za svoju tehniku.  Samopouzdanje:  Samopouzdanje je ključno pri driblanju. Verujte u svoje veštine i budite spremni da preuzmete inicijativu na terenu.   Driblanje je veština koja zahteva mnogo vežbe i strpljenja kako bi se postala efikasna. Kombinujući tehniku driblanja sa razumevanjem igre i taktikom, možete postati vrhunski dribler i doprineti uspehu svog tima. `
-const text_5 = `Kontinuirani Trening  Kontinuirani trening je ključni aspekt uspeha u fudbalu. Uz konstantan rad i vežbanje, možete poboljšati svoje fizičke sposobnosti, tehničke veštine i taktičko razumevanje igre. Evo nekoliko važnih aspekata kontinuiranog treninga u fudbalu: Fizička priprema: Kontinuirani trening fizičke pripreme uključuje rad na izdržljivosti, snazi, brzini, agilnosti i ravnoteži. Redovno vežbanje i kondicioniranje omogućavaju igračima da budu spremni za zahtevne utakmice. Tehničke veštine: Vežbanje tehničkih veština, kao što su driblanje, dodavanje, završavanje i kontrola lopte, ključno je za razvoj igrača. Kontinuirani trening pomaže u poboljšanju preciznosti i konzistencije ovih veština. Takmičarski elementi: Igranje prijateljskih utakmica, učestvovanje na treninzima i takmičarske lige doprinose razvoju konkurentske prirode i razumevanju takmičenja u fudbalu. Taktika i razumevanje igre: Redovno učenje taktičkih aspekata igre, uključujući formacije, taktike napada i odbrane, i razumevanje uloge u timu, omogućava igračima da donose bolje odluke na terenu. Specifični treninzi: Specifični treninzi se odnose na rad na određenim aspektima igre, kao što su udarci iz slobodnog udarca, centaršutevi, odbrambene veštine i slično. Ovi treninzi su usmereni na poboljšanje specifičnih veština i situacija. Analiza igre: Pregledanje snimaka svojih utakmica i analiza vaših performansi može vam pomoći da identifikujete slabosti i prilike za poboljšanje. Mentalna priprema: Kontinuirani trening uključuje i rad na mentalnoj pripremi. Razvijanje mentalne izdržljivosti, samopouzdanja i koncentracije pomaže igračima da se suoče s pritiskom i stresom tokom utakmica. Raznovrsnost vežbi: Raznovrsnost u treninzima je važna. Vežbajte različite veštine, situacije i stilove igre kako biste bili pripremljeni za različite utakmice i protivnike. Planiranje treninga: Pravljenje plana treninga i postavljanje ciljeva pomaže vam da ostanete fokusirani i motivisani tokom sezone. Kontinuirano učenje: Fudbal se neprestano razvija, pa je važno da budete otvoreni za nove tehnike, taktike i promene u igri. Redovno učenje i praćenje najnovijih trendova može vam pomoći da ostanete konkurentni.`
-const text_6 = `Pozicioniranje  Pozicioniranje je ključna veština u fudbalu, bez obzira na poziciju na terenu. Za napadače, pravilno pozicioniranje može biti odlučujuće za postizanje golova. Evo nekoliko ključnih aspekata pozicioniranja u fudbalu: Pozicioniranje u napadu: Napadači treba da se pozicioniraju u šesnaestercu ili drugim delovima terena gde će imati prilike za postizanje golova. To uključuje kretanje tako da se nalazite u pravom trenutku na pravom mestu, na udaljenosti koja vam omogućava da udarite loptu u gol. Kreiranje prostora: Dobro pozicioniranje uključuje kreiranje prostora kako biste se distancirali od defanzivnih igrača. To možete postići trčanjem između linija, povlačenjem od protivničkih igrača ili izvođenjem inteligentnih pokreta i finti. Rad sa saigračima: Saradnja sa saigračima je važna za pozicioniranje. Razumevanje gde će vaši saigrači dodati loptu ili gde će postaviti centaršut može vam pomoći da se pravilno pozicionirate. Očekivanje lopte: Očekivanje gde će lopta biti od strane vaših saigrača ili od protivničkih igrača može vam dati prednost u brzini reakcije i pozicioniranju. Pravilno postavljanje tela: Postavljanje tela između protivničkog igrača i lopte može vam omogućiti da je zaštitite i zadržite pod kontrolom dok se pozicionirate za završavanje. Pokreti van lopte: Dobar napadač razvija sposobnost pravilnih pokreta van lopte. Ovi pokreti uključuju trčanje u dubinu, odvlačenje protivničkih igrača, kreiranje prostora za sebe i otvaranje za dodavanja saigrača. Razumevanje taktike: Razumevanje taktičkih aspekata igre, kao što su ofanzivni i defanzivni presing, može vam pomoći da se pravilno pozicionirate na terenu i iskoristite prilike za postizanje golova. Analiza i učenje: Praćenje profesionalnih igrača i analiza njihovih pokreta i pozicioniranja može vam pružiti korisne uvide i inspiraciju za vašu igru. Rad na izdržljivosti: Dobar napadač treba da bude u mogućnosti da se brzo kreće na terenu i održava pozicioniranje tokom cele utakmice. Rad na izdržljivosti je ključan deo pozicioniranja. Pozicioniranje zahteva razumevanje igre, brzinu, izdržljivost i sposobnost saradnje sa saigračima. Redovno vežbanje i analiza vaše igre će vam pomoći da postanete bolji u pozicioniranju na terenu i efikasno doprinesete uspehu vašeg tima  `
-
+`;
+const text_3 = `Završavanje    Završavanje u fudbalu, ili sposobnost postizanja golova, ključna je veština za napadače. Ovde su neki ključni aspekti završavanja: Tehnike završavanja: Dobar napadač treba da bude vešt u različitim tehnikama završavanja, uključujući udarce glavom, volej udarce, poluvolej udarce, udarce nogom sa obe noge, i čipovanje lopte. Vežbajte različite tehnike završavanja kako biste bili pripremljeni za različite situacije tokom utakmice. Pozicioniranje: Bitno je znati kako se pravilno pozicionirati u šesnaestercu kako biste bili u pravom trenutku na pravom mestu za postizanje gola. Razmislite o pravilnom kretanju i postavljanju kako biste iskoristili prostor i prilike za završavanje. Preciznost i snaga: Važno je razvijati preciznost i snagu udarca. Vežbajte ciljanje gola i udaranje lopte snažno, kako biste bili u mogućnosti pobediti golmana. Brza reakcija: U nogometu, situacije se brzo menjaju. Dobro završavanje zahteva brze reakcije na loptu i donošenje odluka u deliću sekunde. Vežbajte svoje reakcije kako biste postali efikasan strelac. Rad na glavi: Udarci glavom su važan deo završavanja. Vežbajte tehniku udaranja glavom, uključujući kontrolu lopte i preciznost ciljanja. Razumevanje golmana: Razumevanje načina na koji golmani reaguju na udarce može vam pomoći da ih prevaziđete. Pratite njihov položaj i reakcije kako biste bolje ciljali gornji ili donji deo gola. Mentalna priprema: Završavanje zahteva mentalnu snagu. Imajte samopouzdanje u svoje veštine i budite koncentrisani na cilj. Takođe, budite spremni za neuspehe i znajte da će se promašaji događati, ali je važno da ostanete fokusirani na sledeći udarac. Vežba iz različitih situacija: Da biste bili efikasan napadač, vežbajte završavanje iz različitih situacija - sa različitih pozicija na terenu, iz različitih uglova i pod različitim pritiscima. Analiza i učenje od drugih: Proučavajte i analizirajte vrhunske napadače kako biste naučili iz njihovih veština i pristupa završavanju. Završavanje je veština koja se razvija vremenom i zahteva mnogo vežbe. Kombinujući tehniku završavanja sa pozicioniranjem, snagom i preciznošću, možete postati efikasan strelac i doprineti uspehu svog tima.`;
+const text_4 = `Tehnika Driblanja  Driblanje je ključna vještina za napadača.  Vježbajte različite vrste driblinga kao što su dribling unutra, dribling napolje, promjena ritma i promjena pravca Pravilna kontrola lopte je osnova driblanja.  Vežbajte svoju kontrolu lopte tako da možete lako prihvatiti loptu i zadržati je blizu noge. Koristiti unutrašnji i spoljni dio stopala: Driblanje može uključivati korišćenje unutrašnjeg i spoljnog dela stopala, zavisno o situaciji. Unutrašnji deo stopala se koristi za preciznije dodavanje i kontrolisanje lopte, dok spoljni deo stopala omogućava brže promene pravca.  Promjena ritma:  Driblanje nije samo brzina, već i sposobnost promene ritma. Ponekad usporavanje ili ubrzavanje može zbuniti protivničke igrače i otvoriti prostor za prolaz.  Promjena pravca:  Vežbajte promenu pravca brzo i iznenada kako biste zaobišli protivničke igrače. Promena pravca može biti ključna za izbegavanje defanzivnih igrača.  Lažni pokreti:  Lažni pokreti i fintiranje mogu dodatno zbuniti protivničke igrače. To uključuje pokrete tela, ramenima, glavom i nogama kako biste izmanipulisali protivnika.  Korišćenje tela:  Postavljanje tela između protivničkog igrača i lopte može vam pomoći da zaštitite loptu dok driblate.  Vežbanje sa protivnicima:  Driblanje se najbolje uči vežbanjem sa stvarnim protivničkim igračima. Organizujte treniranje saigračima ili prijateljima kako biste stekli praktično iskustvo.  Vežbe u ograničenom prostoru:   Radite vežbe driblanja u skučenom prostoru kako biste razvili veštinu preciznog driblanja u ograničenim uslovima.  Gledanje profesionalnih igrača:  Praćenje profesionalnih fudbalskih utakmica i pažljivo posmatranje tehniku driblanja vrhunskih igrača može vam pomoći da steknete bolje razumevanje i inspiraciju za svoju tehniku.  Samopouzdanje:  Samopouzdanje je ključno pri driblanju. Verujte u svoje veštine i budite spremni da preuzmete inicijativu na terenu.   Driblanje je veština koja zahteva mnogo vežbe i strpljenja kako bi se postala efikasna. Kombinujući tehniku driblanja sa razumevanjem igre i taktikom, možete postati vrhunski dribler i doprineti uspehu svog tima. `;
+const text_5 = `Kontinuirani Trening  Kontinuirani trening je ključni aspekt uspeha u fudbalu. Uz konstantan rad i vežbanje, možete poboljšati svoje fizičke sposobnosti, tehničke veštine i taktičko razumevanje igre. Evo nekoliko važnih aspekata kontinuiranog treninga u fudbalu: Fizička priprema: Kontinuirani trening fizičke pripreme uključuje rad na izdržljivosti, snazi, brzini, agilnosti i ravnoteži. Redovno vežbanje i kondicioniranje omogućavaju igračima da budu spremni za zahtevne utakmice. Tehničke veštine: Vežbanje tehničkih veština, kao što su driblanje, dodavanje, završavanje i kontrola lopte, ključno je za razvoj igrača. Kontinuirani trening pomaže u poboljšanju preciznosti i konzistencije ovih veština. Takmičarski elementi: Igranje prijateljskih utakmica, učestvovanje na treninzima i takmičarske lige doprinose razvoju konkurentske prirode i razumevanju takmičenja u fudbalu. Taktika i razumevanje igre: Redovno učenje taktičkih aspekata igre, uključujući formacije, taktike napada i odbrane, i razumevanje uloge u timu, omogućava igračima da donose bolje odluke na terenu. Specifični treninzi: Specifični treninzi se odnose na rad na određenim aspektima igre, kao što su udarci iz slobodnog udarca, centaršutevi, odbrambene veštine i slično. Ovi treninzi su usmereni na poboljšanje specifičnih veština i situacija. Analiza igre: Pregledanje snimaka svojih utakmica i analiza vaših performansi može vam pomoći da identifikujete slabosti i prilike za poboljšanje. Mentalna priprema: Kontinuirani trening uključuje i rad na mentalnoj pripremi. Razvijanje mentalne izdržljivosti, samopouzdanja i koncentracije pomaže igračima da se suoče s pritiskom i stresom tokom utakmica. Raznovrsnost vežbi: Raznovrsnost u treninzima je važna. Vežbajte različite veštine, situacije i stilove igre kako biste bili pripremljeni za različite utakmice i protivnike. Planiranje treninga: Pravljenje plana treninga i postavljanje ciljeva pomaže vam da ostanete fokusirani i motivisani tokom sezone. Kontinuirano učenje: Fudbal se neprestano razvija, pa je važno da budete otvoreni za nove tehnike, taktike i promene u igri. Redovno učenje i praćenje najnovijih trendova može vam pomoći da ostanete konkurentni.`;
+const text_6 = `Pozicioniranje  Pozicioniranje je ključna veština u fudbalu, bez obzira na poziciju na terenu. Za napadače, pravilno pozicioniranje može biti odlučujuće za postizanje golova. Evo nekoliko ključnih aspekata pozicioniranja u fudbalu: Pozicioniranje u napadu: Napadači treba da se pozicioniraju u šesnaestercu ili drugim delovima terena gde će imati prilike za postizanje golova. To uključuje kretanje tako da se nalazite u pravom trenutku na pravom mestu, na udaljenosti koja vam omogućava da udarite loptu u gol. Kreiranje prostora: Dobro pozicioniranje uključuje kreiranje prostora kako biste se distancirali od defanzivnih igrača. To možete postići trčanjem između linija, povlačenjem od protivničkih igrača ili izvođenjem inteligentnih pokreta i finti. Rad sa saigračima: Saradnja sa saigračima je važna za pozicioniranje. Razumevanje gde će vaši saigrači dodati loptu ili gde će postaviti centaršut može vam pomoći da se pravilno pozicionirate. Očekivanje lopte: Očekivanje gde će lopta biti od strane vaših saigrača ili od protivničkih igrača može vam dati prednost u brzini reakcije i pozicioniranju. Pravilno postavljanje tela: Postavljanje tela između protivničkog igrača i lopte može vam omogućiti da je zaštitite i zadržite pod kontrolom dok se pozicionirate za završavanje. Pokreti van lopte: Dobar napadač razvija sposobnost pravilnih pokreta van lopte. Ovi pokreti uključuju trčanje u dubinu, odvlačenje protivničkih igrača, kreiranje prostora za sebe i otvaranje za dodavanja saigrača. Razumevanje taktike: Razumevanje taktičkih aspekata igre, kao što su ofanzivni i defanzivni presing, može vam pomoći da se pravilno pozicionirate na terenu i iskoristite prilike za postizanje golova. Analiza i učenje: Praćenje profesionalnih igrača i analiza njihovih pokreta i pozicioniranja može vam pružiti korisne uvide i inspiraciju za vašu igru. Rad na izdržljivosti: Dobar napadač treba da bude u mogućnosti da se brzo kreće na terenu i održava pozicioniranje tokom cele utakmice. Rad na izdržljivosti je ključan deo pozicioniranja. Pozicioniranje zahteva razumevanje igre, brzinu, izdržljivost i sposobnost saradnje sa saigračima. Redovno vežbanje i analiza vaše igre će vam pomoći da postanete bolji u pozicioniranju na terenu i efikasno doprinesete uspehu vašeg tima  `;
 ---
-<body class="bg-white text-black font-body leading-normal personality-casual">
+
+<html
+  lang="bs"
+  class="bg-white text-black font-body leading-normal personality-casual"
+>
   <BaseHead meta={meta} />
   <Nav />
 
   <main class="py-12 lg:py-20">
-      <HomeHeader title={title} description={description} />
-<div>
-    <Form
-    client:load
-    question1 = "Is Ronaldo known for his exceptional goal-scoring abilities in football?"
-    answer1 = "yes"
-    
-    question2 = "Has Ronaldo won the FIFA Ballon d'Or multiple times throughout his career?"
-    answer2 = "no"
-    
-  />
-    
-    <div class="flex w-full justify-center items-center mt-4 p-4">
-            <div class="max-w-7xl mx-auto w-full my-8 p-6 bg-paper border rounded-xl shadow-xl">
-              <p class="w-full font-bold text-left text-3xl my-8">
-                {title}
-              </p>
-              <div class="">
+    <HomeHeader title={title} description={description} />
+    <div>
+      <Form
+        client:load
+        question1="Is Ronaldo known for his exceptional goal-scoring abilities in football?"
+        answer1="yes"
+        question2="Has Ronaldo won the FIFA Ballon d'Or multiple times throughout his career?"
+        answer2="no"
+      />
 
-<p class="text-xl leading-loose">{text_1}</p>
-<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/harisk/1.jpg" width="128"/>
+      <div class="flex w-full justify-center items-center mt-4 p-4">
+        <div
+          class="max-w-7xl mx-auto w-full my-8 p-6 bg-paper border rounded-xl shadow-xl"
+        >
+          <p class="w-full font-bold text-left text-3xl my-8">
+            {title}
+          </p>
+          <div class="">
+            <p class="text-xl leading-loose">{text_1}</p>
+            <img
+              class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg"
+              src="/images/students/harisk/1.jpg"
+              width="128"
+            />
 
-<p class="text-xl leading-loose">{text_2}</p>
-<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/harisk/2.jpg" width="128"/>
+            <p class="text-xl leading-loose">{text_2}</p>
+            <img
+              class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg"
+              src="/images/students/harisk/2.jpg"
+              width="128"
+            />
 
-<p class="text-xl leading-loose">{text_3}</p>
-<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/harisk/3.jpg" width="128"/>
+            <p class="text-xl leading-loose">{text_3}</p>
+            <img
+              class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg"
+              src="/images/students/harisk/3.jpg"
+              width="128"
+            />
 
-<p class="text-xl leading-loose">{text_4}</p>
-<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/harisk/4.jpg" width="128"/>
-<p class="text-xl leading-loose">{text_5}</p>
-<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/harisk/5.jpg" width="128"/>
+            <p class="text-xl leading-loose">{text_4}</p>
+            <img
+              class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg"
+              src="/images/students/harisk/4.jpg"
+              width="128"
+            />
+            <p class="text-xl leading-loose">{text_5}</p>
+            <img
+              class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg"
+              src="/images/students/harisk/5.jpg"
+              width="128"
+            />
 
-<p class="text-xl leading-loose">{text_6}</p>
-<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/harisk/6.jpg" width="128"/>
-
-</div>
-             </div>
+            <p class="text-xl leading-loose">{text_6}</p>
+            <img
+              class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg"
+              src="/images/students/harisk/6.jpg"
+              width="128"
+            />
           </div>
-
-      </section>
-    </article>
+        </div>
+      </div>
+    </div>
   </main>
-</body>
+</html>

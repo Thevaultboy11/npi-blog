@@ -1,0 +1,64 @@
+---
+import BaseHead from "../../components/Head/BaseHead.astro";
+import Nav from "../../components/Nav.astro";
+import HomeHeader from "../../components/HomeHeader.astro";
+import Card from "../../components/Card.astro";
+import Footer from "../../components/Footer/Footer.astro";
+import "../../styles/main.scss";
+import Form from "../../components/Form";
+const meta = {
+  title: "Starship Shield Hybrid Assessment",
+};
+
+const description = "Projekat od Ucenika III-5";
+const seoDescription = "Naučite kako da programirate u 15 minuta";
+const title = `Planinarenje kao svrha zivota`;
+const text_1 = `Planinarstvo je lijep i zdrav hobi koji vam omogućuje da uživate u prirodi, upoznate nove ljude i steknete nova iskustva. Ako želite postati planinar, evo nekoliko koraka koje možete slijediti:Učlanite se u planinarsko društvo ili klub. To je najlakši i najsigurniji način da započnete planinarenje, jer ćete imati priliku ići na organizirane izlete pod vodstvom iskusnih planinara koji će vam pokazati osnove planinarske tehnike, opreme i sigurnosti. Na stranici planinarskog saveza FBiH možete pronaći popis planinarskih društava i klubova u Bosni i Hercegovini. Nabavite osnovnu planinarsku opremu. Za početak vam ne treba puno opreme, ali ona mora biti kvalitetna i prilagođena vremenskim uvjetima i terenu na kojem planinarite. Osnovna oprema uključuje planinarske cipele, ruksak, slojevitu odjeću, kape, rukavice, štapove, čeone svjetiljke, vodu, hranu, prvu pomoć, kompas, kartu i mobitel. Kasnije možete nadopuniti svoju opremu ovisno o tome koje vrste planinarenja želite prakticirati (npr. alpinizam, speleologija, skijanje, biciklizam itd.`;
+const text_2 = `U knjigama i časopisima možete pronaći korisne savjete o planinarskoj opremiOdaberite planinarske izlete koji odgovaraju vašoj fizičkoj spremi i iskustvu. U početku je najbolje ići na lakše i kraće izlete u bliže planine, a zatim postupno povećavati težinu i dužinu izleta i odlaziti na udaljenije planine. Ne precjenjujte svoje sposobnosti i ne izlažite se nepotrebnim rizicima. Pratite planinarsku signalizaciju i informirajte se o stanju staza i vremenskoj prognozi. Poštujte planinarski kodeks i čuvajte prirodu. Ako želite unaprijediti svoje planinarsko znanje i vještinu, možete se uključiti u planinarske škole koje organiziraju planinarska društva i klubovi. Tamo ćete naučiti o planinarskoj orijentaciji, meteorologiji, topografiji, prvoj pomoći, planinarskim tehnikama, opasnostima i spašavanju u planinama. Također ćete dobiti priliku za stjecanje planinarskih znački i diploma koje potvrđuju vašu planinarsku kvalifikaciju.`;
+---
+
+<html
+  lang="bs"
+  class="bg-white text-black font-body leading-normal personality-casual"
+>
+  <BaseHead meta={meta} />
+  <Nav />
+
+  <main class="py-12 lg:py-20">
+    <HomeHeader title={title} description={description} />
+    <div>
+      <Form
+        client:load
+        question1="Is joining a mountaineering club or society the easiest and safest way to start hiking, as mentioned in the text?"
+        answer1="yes"
+        question2="Does the basic mountaineering equipment include items such as hiking boots?"
+        answer2="yes"
+      />
+
+      <div class="flex w-full justify-center items-center mt-4 p-4">
+        <div
+          class="max-w-7xl mx-auto w-full my-8 p-6 bg-paper border rounded-xl shadow-xl"
+        >
+          <p class="w-full font-bold text-left text-3xl my-8">
+            {title}
+          </p>
+          <div class="">
+            <p class="text-xl leading-loose">{text_1}</p>
+            <img
+              class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg"
+              src="/images/students/rijad/1.jpg"
+              width="128"
+            />
+
+            <p class="text-xl leading-loose">{text_2}</p>
+            <img
+              class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg"
+              src="/images/students/rijad/2.jpg"
+              width="128"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</html>

@@ -1,57 +1,64 @@
 ---
-import BaseHead from '../../components/Head/BaseHead.astro';
-import Nav from '../../components/Nav.astro';
-import HomeHeader from '../../components/HomeHeader.astro';
-import Card from '../../components/Card.astro';
-import Footer from '../../components/Footer/Footer.astro';
-import  '../../styles/main.scss';
-import Form from '../../components/Form'
+import BaseHead from "../../components/Head/BaseHead.astro";
+import Nav from "../../components/Nav.astro";
+import HomeHeader from "../../components/HomeHeader.astro";
+import Card from "../../components/Card.astro";
+import Footer from "../../components/Footer/Footer.astro";
+import "../../styles/main.scss";
+import Form from "../../components/Form";
 const meta = {
   title: "Starship Shield Hybrid Assessment",
 };
 
-const description = 'Projekat od Ucenika III-5';
-const seoDescription = 'Naučite kako da programirate u 15 minuta';
-const title = `Kako postati audio inzinjer`
-const text_1 = `**Audio inžinjering I produkcija**Audio inženjering je široko područje koje se bavi snimanjem, obradom, produkcijom i reprodukcijom zvuka. Ovde ću vam pružiti osnovni kurs o audio inženjeringu kako biste stekli osnovno razumevanje ove oblasti. **Pojmovi:** ZvukMikrofonSnimanjeFrekvencijaVremenska domenaAmplitudaMixMasterPlug-inAkustikaReprodukcijaPreodukcija1\. Osnove zvukaPrvo, razmislite o osnovnim karakteristikama zvuka:**Frekvencija:** Meri koliko brzo zvuk osciluje i izražava se u hercima (Hz). **Amplituda:** Meri jačinu zvuka i izražava se u decibelima (dB). **Vremenska domena i frekvencijska domena:** Zvuk se može analizirati ili izražavati kao talas u vremenskoj domeni (waveform) ili kao spektar frekvencija u frekvencijskoj domeni. **2. Mikrofoni**Mikrofoni su uređaji koji pretvaraju zvuk u električni signal. Postoje različiti tipovi mikrofona, kao što su dinamički, kondenzatorski i elektret mikrofoni, svaki sa svojim karakteristikama i primenama. **3. Snimanje zvuka**Proces snimanja uključuje postavljanje mikrofona, odabir pravilnih prostornih karakteristika mikrofona, postavljanje nivoa i kvalitetnog akustičnog okruženja. Važno je takođe razmisliti o miksiranju i monitoringu zvuka tokom snimanja. **4. Audio obrada**Nakon snimanja, zvuk se često obrađuje kako bi se poboljšao ili prilagodio željenom zvuku. Obrada uključuje efekte poput ekvilajzera, kompresora, reverbacije i mnoge druge. Ovo se obično radi u digitalnom audio radnom okruženju (DAW). **5. Produkcija**Produkcija zvuka obuhvata aranžiranje i komponovanje muzike, kao i postprodukciju zvuka, kao što su dodavanje efekata, miksiranje i mastering. **6. Reprodukcija**Reprodukcija zvuka se odnosi na puštanje zvuka putem različitih uređaja, uključujući zvučnike, slušalice i audio uređaje. Kvalitetna reprodukcija zahteva dobar dizajn zvučnika i odgovarajuće akustično okruženje. **7. Akustika**Akustika je važna disciplina u audio inženjeringu. Ona se bavi proučavanjem zvuka u prostoru i kako se zvuk ponaša u različitim okruženjima. To u**FL Studio**FL Studio, takođe poznat kao Fruity Loops, je popularan softver za produkciju muzike i snimanje audio zapisa. Ovde ću vam pružiti osnovni kurs o korišćenju FL Studia za kreiranje muzike. **1. Upoznavanje sa korisničkim interfejsom**Aranžer prozor: Ovde organizujete i uređujete različite elemente pesme, kao što su klavijature, sintovi i efekti. Piano Roll: Omogućava vam kreiranje i uređivanje MIDI nota, melodijskih i ritmičkih šablona. Playlist: Služi za organizaciju i sekvenciranje različitih delova pesme. Mixer: Kontroliše nivoe i efekte za svaki zvučni kanal. Browser: Omogućava pristup zvučnim bankama, efektima i instrumentima. **Step Sequencer:** Koristi se za programiranje ritmičkih uzoraka za perkusije i melodije. **2. Kreiranje muzike**Dodavanje zvučnih elemenata: Ubacite MIDI note, audio zapise ili VST instrumente u aranžer prozor. Programiranje ritmova: Koristite Piano Roll ili Step Sequencer za kreiranje ritmičkih šablona. Korišćenje efekata: Dodajte efekte kao što su ekvilajzeri, kompresori i reverb na zvučne kanale u Mixeru.`
-const text_2 = `Koristite VST instrumente: Učitajte virtualne instrumente za stvaranje različitih zvukova. **3. Snimanje i uređivanje audio zapisa**Snimanje audio zapisa: Koristite mikrofone ili drugi audio ulazi za snimanje vokala ili instrumenta. Uređivanje audio zapisa: Učinite audio zapise tačnim i besprekornim korišćenjem alata za sečenje, spajanje i obradu audio zapisa. **4. Mixer i miksiranje**Ravnoteža i paniranje: Podesite nivoe i poziciju zvuka u stereou na Mixeru. Dodavanje efekata: Prilagodite zvuk korišćenjem različitih efekata na svakom kanalu. Automatizacija: Kreirajte promene u vremenu za parametre zvuka koristeći automatizaciju. **5. Mastering****Mastering efekti:** Dodajte efekte poput multiband kompresije i limitera na Master kanalu kako biste postigli profesionalan zvuk. 6\. Izvoz i deljenjeIzvoz pesme: Izvezite pesmu u različitim formatima (WAV, MP3) i rezolucijama. Deljenje pesme: Podelite svoju muziku na društvenim mrežama ili platformama za streaming. **7. Nastavite učiti**FL Studio je dubok softver sa mnogim naprednim funkcijama, pa je važno da nastavite učiti i istraživati kako biste postali veštiji u njegovoj upotrebi. **8. Plug-ins**FL Studio je poznat po svojoj kompatibilnosti sa različitim VST (Virtual Studio Technology) i AU (Audio Unit) pluginima koji omogućavaju dodavanje različitih zvukova i efekata u vaše projekte. Evo nekoliko najpopularnijih VST pluginova koji se često koriste u FL Studiu:**Serum** - Serum je popularan sintesajzer za kreiranje raznovrsnih zvukova, uključujući sve, od dubokih basova do kompleksnih padova. Poznat je po svojoj visokokvalitetnoj wavetable sintezi. **Nexus -** Nexus je rompler plugin koji sadrži veliku kolekciju presetova i zvukova, uključujući razne klavijature, sintove, gitare i udaraljke. **Sylenth1** - Sylenth1 je još jedan popularan sintesajzer koji se koristi za kreiranje raznih zvukova, uključujući i emotivne melodijske linije. **Omnisphere** - Omnisphere je moćan sintesajzer i samplovan instrument koji nudi bogatu biblioteku zvukova i mogućnost korišćenja slojeva zvuka i efekata. **FabFilter Pro-Q 3** - Ovaj EQ plugin je vrlo cenjen zbog svoje preciznosti i fleksibilnosti pri oblikovanju zvuka. **ReFX Nexus** - Nexus je popularan rompler sa velikom bibliotekom presetova i zvukova, idealan za brzo stvaranje melodija. **Waves SSL E-Channel** - Ovaj plugin emulira čuveni SSL mikser i koristi se za obradu i miksiranje zvuka. **Soundtoys EchoBoy** - EchoBoy je popularni delay i echo efekat koji omogućava kreativno oblikovanje prostora i atmosfere u pesmi. **Massive** - Massive je sintesajzer koji se koristi za stvaranje dubstep i elektronskih zvukova, poznat po svojoj sposobnosti za masivne basove i lead zvuke. **iZotope Ozone** - Ozone je popularan plugin za mastering, koji omogućava završno doterivanje i poboljšavanje kvaliteta pesme pre izdavanja. Napomena: Ovi pluginovi su samo neki od mnogih dostupnih na tržištu, i izbor pluginova će zavisiti od vaših muzičkih potreba i preferencija. Pre nego što nabavite plugin, preporučuje se da istražite i isprobate besplatne demo verzije kako biste se uverili da odgovaraju vašem stilu i radnom procesu. **Nekoliko linkova za Youtube videe koji mogu biti od pomoći:** [FL Studio - Complete Beginner Basics Tutorial - YouTube](https://www. youtube. com/watch? v=pDIsEZsalAo)[Music Production with FL Studio – Full Tutorial for Beginners - YouTube](https://www. youtube. com/watch? v=BUjdnxgBgzM)Ovaj kratki kurs vam daje osnovno razumevanje FL Studia, ali preporučujemo da proučavate upute, gledate video tutorijale i eksperimentišete kako biste stekli više iskustva i veština u produkciji muzike.`
-
+const description = "Projekat od Ucenika III-5";
+const seoDescription = "Naučite kako da programirate u 15 minuta";
+const title = `Kako postati audio inzinjer`;
+const text_1 = `**Audio inžinjering I produkcija**Audio inženjering je široko područje koje se bavi snimanjem, obradom, produkcijom i reprodukcijom zvuka. Ovde ću vam pružiti osnovni kurs o audio inženjeringu kako biste stekli osnovno razumevanje ove oblasti. **Pojmovi:** ZvukMikrofonSnimanjeFrekvencijaVremenska domenaAmplitudaMixMasterPlug-inAkustikaReprodukcijaPreodukcija1\. Osnove zvukaPrvo, razmislite o osnovnim karakteristikama zvuka:**Frekvencija:** Meri koliko brzo zvuk osciluje i izražava se u hercima (Hz). **Amplituda:** Meri jačinu zvuka i izražava se u decibelima (dB). **Vremenska domena i frekvencijska domena:** Zvuk se može analizirati ili izražavati kao talas u vremenskoj domeni (waveform) ili kao spektar frekvencija u frekvencijskoj domeni. **2. Mikrofoni**Mikrofoni su uređaji koji pretvaraju zvuk u električni signal. Postoje različiti tipovi mikrofona, kao što su dinamički, kondenzatorski i elektret mikrofoni, svaki sa svojim karakteristikama i primenama. **3. Snimanje zvuka**Proces snimanja uključuje postavljanje mikrofona, odabir pravilnih prostornih karakteristika mikrofona, postavljanje nivoa i kvalitetnog akustičnog okruženja. Važno je takođe razmisliti o miksiranju i monitoringu zvuka tokom snimanja. **4. Audio obrada**Nakon snimanja, zvuk se često obrađuje kako bi se poboljšao ili prilagodio željenom zvuku. Obrada uključuje efekte poput ekvilajzera, kompresora, reverbacije i mnoge druge. Ovo se obično radi u digitalnom audio radnom okruženju (DAW). **5. Produkcija**Produkcija zvuka obuhvata aranžiranje i komponovanje muzike, kao i postprodukciju zvuka, kao što su dodavanje efekata, miksiranje i mastering. **6. Reprodukcija**Reprodukcija zvuka se odnosi na puštanje zvuka putem različitih uređaja, uključujući zvučnike, slušalice i audio uređaje. Kvalitetna reprodukcija zahteva dobar dizajn zvučnika i odgovarajuće akustično okruženje. **7. Akustika**Akustika je važna disciplina u audio inženjeringu. Ona se bavi proučavanjem zvuka u prostoru i kako se zvuk ponaša u različitim okruženjima. To u**FL Studio**FL Studio, takođe poznat kao Fruity Loops, je popularan softver za produkciju muzike i snimanje audio zapisa. Ovde ću vam pružiti osnovni kurs o korišćenju FL Studia za kreiranje muzike. **1. Upoznavanje sa korisničkim interfejsom**Aranžer prozor: Ovde organizujete i uređujete različite elemente pesme, kao što su klavijature, sintovi i efekti. Piano Roll: Omogućava vam kreiranje i uređivanje MIDI nota, melodijskih i ritmičkih šablona. Playlist: Služi za organizaciju i sekvenciranje različitih delova pesme. Mixer: Kontroliše nivoe i efekte za svaki zvučni kanal. Browser: Omogućava pristup zvučnim bankama, efektima i instrumentima. **Step Sequencer:** Koristi se za programiranje ritmičkih uzoraka za perkusije i melodije. **2. Kreiranje muzike**Dodavanje zvučnih elemenata: Ubacite MIDI note, audio zapise ili VST instrumente u aranžer prozor. Programiranje ritmova: Koristite Piano Roll ili Step Sequencer za kreiranje ritmičkih šablona. Korišćenje efekata: Dodajte efekte kao što su ekvilajzeri, kompresori i reverb na zvučne kanale u Mixeru.`;
+const text_2 = `Koristite VST instrumente: Učitajte virtualne instrumente za stvaranje različitih zvukova. **3. Snimanje i uređivanje audio zapisa**Snimanje audio zapisa: Koristite mikrofone ili drugi audio ulazi za snimanje vokala ili instrumenta. Uređivanje audio zapisa: Učinite audio zapise tačnim i besprekornim korišćenjem alata za sečenje, spajanje i obradu audio zapisa. **4. Mixer i miksiranje**Ravnoteža i paniranje: Podesite nivoe i poziciju zvuka u stereou na Mixeru. Dodavanje efekata: Prilagodite zvuk korišćenjem različitih efekata na svakom kanalu. Automatizacija: Kreirajte promene u vremenu za parametre zvuka koristeći automatizaciju. **5. Mastering****Mastering efekti:** Dodajte efekte poput multiband kompresije i limitera na Master kanalu kako biste postigli profesionalan zvuk. 6\. Izvoz i deljenjeIzvoz pesme: Izvezite pesmu u različitim formatima (WAV, MP3) i rezolucijama. Deljenje pesme: Podelite svoju muziku na društvenim mrežama ili platformama za streaming. **7. Nastavite učiti**FL Studio je dubok softver sa mnogim naprednim funkcijama, pa je važno da nastavite učiti i istraživati kako biste postali veštiji u njegovoj upotrebi. **8. Plug-ins**FL Studio je poznat po svojoj kompatibilnosti sa različitim VST (Virtual Studio Technology) i AU (Audio Unit) pluginima koji omogućavaju dodavanje različitih zvukova i efekata u vaše projekte. Evo nekoliko najpopularnijih VST pluginova koji se često koriste u FL Studiu:**Serum** - Serum je popularan sintesajzer za kreiranje raznovrsnih zvukova, uključujući sve, od dubokih basova do kompleksnih padova. Poznat je po svojoj visokokvalitetnoj wavetable sintezi. **Nexus -** Nexus je rompler plugin koji sadrži veliku kolekciju presetova i zvukova, uključujući razne klavijature, sintove, gitare i udaraljke. **Sylenth1** - Sylenth1 je još jedan popularan sintesajzer koji se koristi za kreiranje raznih zvukova, uključujući i emotivne melodijske linije. **Omnisphere** - Omnisphere je moćan sintesajzer i samplovan instrument koji nudi bogatu biblioteku zvukova i mogućnost korišćenja slojeva zvuka i efekata. **FabFilter Pro-Q 3** - Ovaj EQ plugin je vrlo cenjen zbog svoje preciznosti i fleksibilnosti pri oblikovanju zvuka. **ReFX Nexus** - Nexus je popularan rompler sa velikom bibliotekom presetova i zvukova, idealan za brzo stvaranje melodija. **Waves SSL E-Channel** - Ovaj plugin emulira čuveni SSL mikser i koristi se za obradu i miksiranje zvuka. **Soundtoys EchoBoy** - EchoBoy je popularni delay i echo efekat koji omogućava kreativno oblikovanje prostora i atmosfere u pesmi. **Massive** - Massive je sintesajzer koji se koristi za stvaranje dubstep i elektronskih zvukova, poznat po svojoj sposobnosti za masivne basove i lead zvuke. **iZotope Ozone** - Ozone je popularan plugin za mastering, koji omogućava završno doterivanje i poboljšavanje kvaliteta pesme pre izdavanja. Napomena: Ovi pluginovi su samo neki od mnogih dostupnih na tržištu, i izbor pluginova će zavisiti od vaših muzičkih potreba i preferencija. Pre nego što nabavite plugin, preporučuje se da istražite i isprobate besplatne demo verzije kako biste se uverili da odgovaraju vašem stilu i radnom procesu. **Nekoliko linkova za Youtube videe koji mogu biti od pomoći:** [FL Studio - Complete Beginner Basics Tutorial - YouTube](https://www. youtube. com/watch? v=pDIsEZsalAo)[Music Production with FL Studio – Full Tutorial for Beginners - YouTube](https://www. youtube. com/watch? v=BUjdnxgBgzM)Ovaj kratki kurs vam daje osnovno razumevanje FL Studia, ali preporučujemo da proučavate upute, gledate video tutorijale i eksperimentišete kako biste stekli više iskustva i veština u produkciji muzike.`;
 ---
-<body class="bg-white text-black font-body leading-normal personality-casual">
+
+<html
+  lang="bs"
+  class="bg-white text-black font-body leading-normal personality-casual"
+>
   <BaseHead meta={meta} />
   <Nav />
 
   <main class="py-12 lg:py-20">
-      <HomeHeader title={title} description={description} />
-<div>
-    <Form
-    client:load
-    question1 = "Do audio engineers work with sound equipment to record, edit, and produce audio?"
-    answer1 = "yes"
-    
-    question2 = "Is a deep understanding of acoustics and sound technology essential for audio engineers?"
-    answer2 = "no"
-    
-  />
-    
-    <div class="flex w-full justify-center items-center mt-4 p-4">
-            <div class="max-w-7xl mx-auto w-full my-8 p-6 bg-paper border rounded-xl shadow-xl">
-              <p class="w-full font-bold text-left text-3xl my-8">
-                {title}
-              </p>
-              <div class="">
+    <HomeHeader title={title} description={description} />
+    <div>
+      <Form
+        client:load
+        question1="Do audio engineers work with sound equipment to record, edit, and produce audio?"
+        answer1="yes"
+        question2="Is a deep understanding of acoustics and sound technology essential for audio engineers?"
+        answer2="no"
+      />
 
-<p class="text-xl leading-loose">{text_1}</p>
-<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/tarik/1.jpg" width="128"/>
+      <div class="flex w-full justify-center items-center mt-4 p-4">
+        <div
+          class="max-w-7xl mx-auto w-full my-8 p-6 bg-paper border rounded-xl shadow-xl"
+        >
+          <p class="w-full font-bold text-left text-3xl my-8">
+            {title}
+          </p>
+          <div class="">
+            <p class="text-xl leading-loose">{text_1}</p>
+            <img
+              class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg"
+              src="/images/students/tarik/1.jpg"
+              width="128"
+            />
 
-<p class="text-xl leading-loose">{text_2}</p>
-<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/tarik/2.jpg" width="128"/>
-
-</div>
-             </div>
+            <p class="text-xl leading-loose">{text_2}</p>
+            <img
+              class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg"
+              src="/images/students/tarik/2.jpg"
+              width="128"
+            />
           </div>
-
-      </section>
-    </article>
+        </div>
+      </div>
+    </div>
   </main>
-</body>
+</html>

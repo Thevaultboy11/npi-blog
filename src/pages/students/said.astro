@@ -1,56 +1,95 @@
 ---
-import BaseHead from '../../components/Head/BaseHead.astro';
-import Nav from '../../components/Nav.astro';
-import HomeHeader from '../../components/HomeHeader.astro';
-import Card from '../../components/Card.astro';
-import Footer from '../../components/Footer/Footer.astro';
-import  '../../styles/main.scss';
-import Form from '../../components/Form'
+import BaseHead from "../../components/Head/BaseHead.astro";
+import Nav from "../../components/Nav.astro";
+import HomeHeader from "../../components/HomeHeader.astro";
+import Card from "../../components/Card.astro";
+import Footer from "../../components/Footer/Footer.astro";
+import "../../styles/main.scss";
+import Form from "../../components/Form";
 const meta = {
   title: "Starship Shield Hybrid Assessment",
 };
 
-const description = 'Projekat od Ucenika III-5';
-const seoDescription = 'Naučite kako da programirate u 15 minuta';
-const title = `Kako imati dobru ishranu`
-const text_1 = `Lekcija 5. 1: Kreiranje uravnotežene ishrane Definicija uravnotežene ishrane: Uravnotežena ishrana podrazumijeva unos različitih hranljivih materija u odgovarajućim količinama kako bi se osigurali svi potrebni nutrijenti za održavanje zdravlja i dobrobiti. Piramide ishrane: Piramide ishrane su alati koji pomažu u vizualizaciji preporučenih količina različitih grupa hrane u ishrani. To uključuje voće, povrće, žitarice, proteine i mliječne proizvode. Varijacija u ishrani: Raznolikost u ishrani je ključna za osiguravanje da tijelo dobije sve potrebne nutrijente. To također pomaže da se izbjegnu monotone dijete i dosada u ishrani. Lekcija 5. 2: Praćenje unosa makronutrijenata Praćenje kalorija i makronutrijenata: Praćenje unosa kalorija i makronutrijenata (ugljikohidrata, proteina, masti) može pomoći da se osigura uravnotežena ishrana i postigne određeni cilj, kao što je mršavljenje ili izgradnja mišića. Alati za praćenje: Postoje razni alati i aplikacije koji olakšavaju praćenje unosa kalorija i makronutrijenata, kao što su MyFitnessPal i slični resursi. Lekcija 5.`
-const text_2 = `Pretpostavimo da imate obrok koji sadrži 100 grama ugljikohidrata. Koristeći informaciju da svaki gram ugljikohidrata pruža otprilike 4 kalorije energije, izračunajte ukupan broj kalorija koje ćete dobiti iz ovih ugljikohidrata.Odgovorite na sljedeće pitanje:1.	Koliko kalorija pruža obrok sa 100 grama ugljikohidrata?Ovaj zadatak pomaže studentima da primijene svoje znanje o energetskoj vrijednosti ugljikohidrata i razumiju koliko energije dobivamo iz ovog makronutrijenta u ishrani.Lekcija 3.1: Proteini: Građevinski materijal tijelahttps://www.youtube.com/watch?v=CzBGa8KnM3Q1.	Funkcija proteina: Proteini su temeljni građevinski materijal za tijelo. Oni igraju ključnu ulogu u rastu, obnovi i održavanju tkiva, uključujući mišiće, kožu, kosu, i unutrašnje organe.2.	Aminokiseline: Proteini su sastavljeni od aminokiselina, koje su osnovne građevne jedinice proteina. Postoji 20 različitih aminokiselina, a njihova kombinacija čini različite vrste proteina.3.	Neesencijalne i esencijalne aminokiseline: Neesencijalne aminokiseline mogu se proizvesti u tijelu, dok su esencijalne aminokiseline one koje moramo unositi hranom jer ih tijelo ne može samostalno proizvesti.Lekcija 3.2: Izvori proteina1.	Biljni i životinjski izvori proteina: Proteini se mogu naći u životinjskim izvorima kao što su meso, riba, i jaja, te u biljnim izvorima kao što su mahunarke, orašasti plodovi, i povrće.2.	Biološka vrijednost proteina: Biološka vrijednost proteina određuje koliko dobro tijelo može iskoristiti proteine iz različitih izvora. Životinjski izvori često imaju visoku biološku vrijednost.3.	Vegetarijanski i veganski izbori: Ljudi koji prakticiraju vegetarijanstvo ili veganstvo trebaju pažljivo planirati svoju ishranu kako bi osigurali adekvatan unos proteina iz biljnih izvora.Lekcija 3.3: Potrebe za proteinima1.	Individualne potrebe za proteinima: Potrebe za proteinima variraju između pojedinaca i zavise od faktora kao što su tjelesna masa, nivo tjelesne aktivnosti, i specifični ciljevi (npr. rast mišića ili održavanje tjelesne mase).2.	Unos proteina u sportu: Sportisti i aktivni pojedinci često imaju povećane potrebe za proteinima kako bi podržali oporavak mišića i izdržljivost.3.	Pravilan unos proteina u svakodnevnoj ishrani: Održavanje ravnoteže unosa proteina ključno je za opće zdravlje i dobrobit, uključujući očuvanje mišićne mase i funkciju tijela.Zadatak: Izračunajte Dnevne Potrebe za ProteinimaPredpostavimo da ste aktivna osoba i želite izračunati koliko proteina trebate svakog dana kako biste podržali vaše tjelesne ciljeve. Upotrijebite sljedeće informacije:•	Vaša tjelesna masa: 70 kg•	Vaš nivo tjelesne aktivnosti: Srednji (aktivni ste 3-4 puta sedmično)•	Vaši ciljevi: Održavanje tjelesne mase i oporavak mišićaKoristite preporučenu količinu proteina po kilogramu tjelesne mase kako biste izračunali koliko proteina trebate unijeti svakog dana.Nakon izračuna, razmislite o tome kako biste mogli planirati svoje obroke kako biste zadovoljili te dnevne potrebe za proteinima.Lekcija 4.1: Različite vrste dijetalnih mastihttps://www.youtube.com/watch?v=IALndv3I2cg1.	Vrste masti: Dijetalne masti mogu se podijeliti na tri osnovne vrste: zasićene masti, jednostruko nezasićene masti i višestruko nezasićene masti. Svaka vrsta ima različite karakteristike i uticaje na zdravlje.2.	Izvori masti: Zasićene masti se često nalaze u mesu i mliječnim proizvodima, dok se jednostruko i višestruko nezasićene masti nalaze u maslinovom ulju, orašastim plodovima i ribi.3.	Trans masti: Trans masti su vrsta nezdravih masti koje se nalaze u prerađenim i brzoj hrani, i povezane su s povećanim rizikom od srčanih oboljenja.Lekcija 4.2: Masti i zdravlje1.	Funkcija masti: Masti igraju važnu ulogu u tijelu kao izvor dugotrajne energije, transport liposolubilnih vitamina, očuvanje toplote, i zaštitu unutrašnjih organa.2.	Ravnoteža masti: Održavanje ravnoteže između različitih vrsta masti je ključno za održavanje optimalnog zdravlja. Prekomjerni unos zasićenih i trans masti može povećati rizik od bolesti srca.3.	Omega-3 masne kiseline: Omega-3 masne kiseline, koje se nalaze u ribi i orašastim plodovima, poznate su po svojim pozitivnim uticajima na zdravlje srca i mozga.Lekcija 4.3: Preporučeni unos masti1.	Dnevni unos masti: Preporučeni dnevni unos masti varira, ali oko 20-35% dnevnog unosa kalorija treba dolaziti iz masti.2.	Etikete na proizvodima: Čitanje etiketa na proizvodima može vam pomoći da prepoznate različite vrste masti u hrani i donesete informirane odluke o tome što jedete.3.	Pravilno prženje i priprema hrane: Pravilna priprema hrane, kao što je korištenje nezasićenih ulja i izbjegavanje trans masti, može doprinijeti zdravijoj ishrani.Zadatak: Planiranje Dnevnog Unosa MastiPretpostavimo da ste osoba koja konzumira 2000 kalorija dnevno i želi pravilno uravnotežiti unos masti. Vaš cilj je održati unos masti unutar preporučenih granica od 20-35% dnevnih kalorija.Odgovorite na sljedeća pitanja:1.	Koliko kalorija iz masti trebate unositi dnevno kako biste zadovoljili preporučene granice?2.	Ako svaki gram masti pruža 9 kalorija, koliko grama masti trebate unositi dnevno?3.	Planirajte obrok koji će sadržavati masti kako biste zadovoljili dnevne potrebe za mastima, a zatim navedite izvore masti koje biste uključili u taj obrok.Lekcija 5.1: Kreiranje uravnotežene ishranehttps://www.youtube.com/watch?v=tsgyWIsYvxs1.	Definicija uravnotežene ishrane: Uravnotežena ishrana podrazumijeva unos različitih hranljivih materija u odgovarajućim količinama kako bi se osigurali svi potrebni nutrijenti za održavanje zdravlja i dobrobiti.2.	Piramide ishrane: Piramide ishrane su alati koji pomažu u vizualizaciji preporučenih količina različitih grupa hrane u ishrani. To uključuje voće, povrće, žitarice, proteine i mliječne proizvode.3.	Varijacija u ishrani: Raznolikost u ishrani je ključna za osiguravanje da tijelo dobije sve potrebne nutrijente. To također pomaže da se izbjegnu monotone dijete i dosada u ishrani.Lekcija 5.2: Praćenje unosa makronutrijenata1.	Praćenje kalorija i makronutrijenata: Praćenje unosa kalorija i makronutrijenata (ugljikohidrata, proteina, masti) može pomoći da se osigura uravnotežena ishrana i postigne određeni cilj, kao što je mršavljenje ili izgradnja mišića.2.	Alati za praćenje: Postoje razni alati i aplikacije koji olakšavaju praćenje unosa kalorija i makronutrijenata, kao što su MyFitnessPal i slični resursi.Lekcija 5.3: Planiranje obroka prema makronutrijentima1.	Planiranje obroka: Planiranje obroka prema makronutrijentima uključuje ravnotežu između unosa ugljikohidrata, proteina i masti kako bi se zadovoljile dnevne potrebe i ciljevi ishrane.2.	Hrana kao gorivo: Ugljikohidrati su brzi izvor energije, proteini su građevinski materijal za tijelo, a masti pružaju dugotrajnu energiju. Razumijevanje ove uloge pomaže u planiranju obroka.`
-
+const description = "Projekat od Ucenika III-5";
+const seoDescription = "Naučite kako da programirate u 15 minuta";
+const title = `Kako postati majstor zdrave ishrane`;
+const text_1 = `Razumijevanje MakronutrijenataPregled kursa: Dobrodošli na kurs "Razumijevanje Makronutrijenata". U ovom kursu ćete naučiti o tri osnovna makronutrijenta koji čine vašu ishranu: ugljikohidrati, proteini i masti. Istražit ćemo njihovu ulogu u ishrani, kako izračunati vaše potrebe za makronutrijentima i praktične savjete za postizanje uravnotežene ishrane. Plan kursa:Modul 1: Uvod u MakronutrijenteLekcija 1. 1: Šta su makronutrijenti? U ovoj lekciji ćemo razgovarati o osnovnim komponentama naše ishrane - makronutrijentima. Makronutrijenti su klase hranljivih materija koje pružaju energiju organizmu i čine osnovu naše ishrane. To su ugljikohidrati, proteini i masti. Lekcija 1. 2: Uloga makronutrijenata u ishrani Sada ćemo istražiti ulogu koju svaki od makronutrijenata igra u našoj ishrani. Ugljikohidrati pružaju brzu energiju, proteini su građevinski materijal za naše tkivo i mišiće, dok masti imaju važne funkcije u apsorpciji vitamina i očuvanju zdravlja. Lekcija 1. 3: Energetska vrijednost makronutrijenata U ovoj lekciji ćemo se usredsrediti na energetsku vrijednost makronutrijenata. Svaki makronutrijent ima određenu energetsku vrijednost koja se mjeri u kalorijama. Razumijevanje ovih vrijednosti pomoći će vam da bolje razumijete kako vaša ishrana utječe na vašu dnevnu energiju i ravnotežu. Zadatak: Izračunajte Dnevne Kalorijske PotrebePredpostavimo da imate jedan dan da planirate obrok koji će zadovoljiti vaše dnevne energetske potrebe. Koristeći sljedeće informacije, izračunajte koliko kalorija trebate unijeti:•	Vaša težina: 70 kg•	Vaša visina: 175 cm•	Vaš pol: Muški•	Vaša dob: 30 godina•	Vaš nivo tjelesne aktivnosti: Sjedilački način života (minimalna aktivnost)Upotrijebite Harris-Benedictovu jednačinu za izračunavanje bazalnog metabolizma (BMR) i množite ga faktorom aktivnosti kako biste dobili ukupne dnevne kalorijske potrebe. Nakon što izračunate svoje dnevne energetske potrebe, razmotrite kako biste rasporedili unos makronutrijenata (ugljikohidrati, proteini, masti) da biste postigli ravnotežu. Nakon izračuna, možete uporediti svoj odgovor sa smjernicama za unos kalorija i makronutrijenata koje ste naučili u kursu kako biste vidjeli kako dobro razumijete ovu temu. Lekcija 2. 1: Ugljikohidrati: Vrste i izvori1. 	Vrste ugljikohidrata: Ugljikohidrati se dijele na jednostavne i složene.`;
+const text_2 = `Jednostavni ugljikohidrati uključuju šećere iz voća, meda i slatkiša, dok su složeni ugljikohidrati prisutni u žitaricama, povrću i mahunarkama. 2. 	Izvori ugljikohidrata: Namirnice poput krompira, riže, tjestenine, i kruha su bogate složenim ugljikohidratima. Voće i povrće pružaju vlakna i prirodne šećere. 3. 	Funkcija vlakana: Vlakna su posebna vrsta složenih ugljikohidrata koja su ključna za zdravlje probavnog sistema. Ona pomažu u regulaciji probave i održavanju zdravog nivoa šećera u krvi. Lekcija 2. 2: Ugljikohidrati i energija1. 	Glikoliza: Ugljikohidrati se razgrađuju putem procesa nazvanog glikoliza kako bi se proizvela glukoza, koja je glavni izvor energije za tijelo. 2. 	Energetska vrijednost ugljikohidrata: Svaki gram ugljikohidrata pruža oko 4 kalorije energije. To ih čini značajnim izvorom goriva za tijelo. 3. 	Balansiran unos ugljikohidrata: Pravilan unos ugljikohidrata je važan za održavanje energije i optimalnih tjelesnih funkcija. Previše ili premalo ugljikohidrata može dovesti do problema s energijom i zdravljem. Lekcija 2. 3: Ugljikohidrati i zdravlje1. 	Glikemijski indeks: Glikemijski indeks je mjera kako hrana utječe na nivo šećera u krvi. Namirnice s visokim glikemijskim indeksom mogu uzrokovati nagli skok šećera u krvi, dok namirnice s niskim glikemijskim indeksom imaju blaži uticaj. 2. 	Ravnoteža ugljikohidrata: Održavanje ravnoteže između jednostavnih i složenih ugljikohidrata važno je za održavanje stabilnog nivoa šećera u krvi i prevenciju metaboličkih problema.`;
+const text_3 = `3. 	Dijetetska vlakna i zdravlje: Konzumiranje dovoljno dijetetskih vlakana pomaže u prevenciji problema sa varenjem i podržava zdravlje srca. Pretpostavimo da imate obrok koji sadrži 100 grama ugljikohidrata. Koristeći informaciju da svaki gram ugljikohidrata pruža otprilike 4 kalorije energije, izračunajte ukupan broj kalorija koje ćete dobiti iz ovih ugljikohidrata. Odgovorite na sljedeće pitanje:1. 	Koliko kalorija pruža obrok sa 100 grama ugljikohidrata? Ovaj zadatak pomaže studentima da primijene svoje znanje o energetskoj vrijednosti ugljikohidrata i razumiju koliko energije dobivamo iz ovog makronutrijenta u ishrani. 1. 	Funkcija proteina: Proteini su temeljni građevinski materijal za tijelo. Oni igraju ključnu ulogu u rastu, obnovi i održavanju tkiva, uključujući mišiće, kožu, kosu, i unutrašnje organe. 2. 	Aminokiseline: Proteini su sastavljeni od aminokiselina, koje su osnovne građevne jedinice proteina. Postoji 20 različitih aminokiselina, a njihova kombinacija čini različite vrste proteina. 3. 	Neesencijalne i esencijalne aminokiseline: Neesencijalne aminokiseline mogu se proizvesti u tijelu, dok su esencijalne aminokiseline one koje moramo unositi hranom jer ih tijelo ne može samostalno proizvesti. Lekcija 3. 2: Izvori proteina1. 	Biljni i životinjski izvori proteina: Proteini se mogu naći u životinjskim izvorima kao što su meso, riba, i jaja, te u biljnim izvorima kao što su mahunarke, orašasti plodovi, i povrće. 2. 	Biološka vrijednost proteina: Biološka vrijednost proteina određuje koliko dobro tijelo može iskoristiti proteine iz različitih izvora. Životinjski izvori često imaju visoku biološku vrijednost.`;
+const text_4 = `Vegetarijanski i veganski izbori: Ljudi koji prakticiraju vegetarijanstvo ili veganstvo trebaju pažljivo planirati svoju ishranu kako bi osigurali adekvatan unos proteina iz biljnih izvora. Lekcija 3. 3: Potrebe za proteinima1. 	Individualne potrebe za proteinima: Potrebe za proteinima variraju između pojedinaca i zavise od faktora kao što su tjelesna masa, nivo tjelesne aktivnosti, i specifični ciljevi (npr. rast mišića ili održavanje tjelesne mase). 2. 	Unos proteina u sportu: Sportisti i aktivni pojedinci često imaju povećane potrebe za proteinima kako bi podržali oporavak mišića i izdržljivost. 3. 	Pravilan unos proteina u svakodnevnoj ishrani: Održavanje ravnoteže unosa proteina ključno je za opće zdravlje i dobrobit, uključujući očuvanje mišićne mase i funkciju tijela. Zadatak: Izračunajte Dnevne Potrebe za ProteinimaPredpostavimo da ste aktivna osoba i želite izračunati koliko proteina trebate svakog dana kako biste podržali vaše tjelesne ciljeve. Upotrijebite sljedeće informacije:•	Vaša tjelesna masa: 70 kg•	Vaš nivo tjelesne aktivnosti: Srednji (aktivni ste 3-4 puta sedmično)•	Vaši ciljevi: Održavanje tjelesne mase i oporavak mišićaKoristite preporučenu količinu proteina po kilogramu tjelesne mase kako biste izračunali koliko proteina trebate unijeti svakog dana. Nakon izračuna, razmislite o tome kako biste mogli planirati svoje obroke kako biste zadovoljili te dnevne potrebe za proteinima. Lekcija 4. 1: Različite vrste dijetalnih masti1. 	Vrste masti: Dijetalne masti mogu se podijeliti na tri osnovne vrste: zasićene masti, jednostruko nezasićene masti i višestruko nezasićene masti. Svaka vrsta ima različite karakteristike i uticaje na zdravlje. 2. 	Izvori masti: Zasićene masti se često nalaze u mesu i mliječnim proizvodima, dok se jednostruko i višestruko nezasićene masti nalaze u maslinovom ulju, orašastim plodovima i ribi. 3. 	Trans masti: Trans masti su vrsta nezdravih masti koje se nalaze u prerađenim i brzoj hrani, i povezane su s povećanim rizikom od srčanih oboljenja.`;
+const text_5 = `Funkcija masti: Masti igraju važnu ulogu u tijelu kao izvor dugotrajne energije, transport liposolubilnih vitamina, očuvanje toplote, i zaštitu unutrašnjih organa. 2. 	Ravnoteža masti: Održavanje ravnoteže između različitih vrsta masti je ključno za održavanje optimalnog zdravlja. Prekomjerni unos zasićenih i trans masti može povećati rizik od bolesti srca. 3. 	Omega-3 masne kiseline: Omega-3 masne kiseline, koje se nalaze u ribi i orašastim plodovima, poznate su po svojim pozitivnim uticajima na zdravlje srca i mozga. Lekcija 4. 3: Preporučeni unos masti1. 	Dnevni unos masti: Preporučeni dnevni unos masti varira, ali oko 20-35% dnevnog unosa kalorija treba dolaziti iz masti. 2. 	Etikete na proizvodima: Čitanje etiketa na proizvodima može vam pomoći da prepoznate različite vrste masti u hrani i donesete informirane odluke o tome što jedete. 3. 	Pravilno prženje i priprema hrane: Pravilna priprema hrane, kao što je korištenje nezasićenih ulja i izbjegavanje trans masti, može doprinijeti zdravijoj ishrani. Zadatak: Planiranje Dnevnog Unosa MastiPretpostavimo da ste osoba koja konzumira 2000 kalorija dnevno i želi pravilno uravnotežiti unos masti. Vaš cilj je održati unos masti unutar preporučenih granica od 20-35% dnevnih kalorija. Odgovorite na sljedeća pitanja: 1. 	Definicija uravnotežene ishrane: Uravnotežena ishrana podrazumijeva unos različitih hranljivih materija u odgovarajućim količinama kako bi se osigurali svi potrebni nutrijenti za održavanje zdravlja i dobrobiti. 2. 	Piramide ishrane: Piramide ishrane su alati koji pomažu u vizualizaciji preporučenih količina različitih grupa hrane u ishrani. To uključuje voće, povrće, žitarice, proteine i mliječne proizvode. 3. 	Varijacija u ishrani: Raznolikost u ishrani je ključna za osiguravanje da tijelo dobije sve potrebne nutrijente.`;
+const text_6 = `To također pomaže da se izbjegnu monotone dijete i dosada u ishrani. Lekcija 5. 2: Praćenje unosa makronutrijenata1. 	Praćenje kalorija i makronutrijenata: Praćenje unosa kalorija i makronutrijenata (ugljikohidrata, proteina, masti) može pomoći da se osigura uravnotežena ishrana i postigne određeni cilj, kao što je mršavljenje ili izgradnja mišića. 2. 	Alati za praćenje: Postoje razni alati i aplikacije koji olakšavaju praćenje unosa kalorija i makronutrijenata, kao što su MyFitnessPal i slični resursi. Lekcija 5. 3: Planiranje obroka prema makronutrijentima1. 	Planiranje obroka: Planiranje obroka prema makronutrijentima uključuje ravnotežu između unosa ugljikohidrata, proteina i masti kako bi se zadovoljile dnevne potrebe i ciljevi ishrane. 2. 	Hrana kao gorivo: Ugljikohidrati su brzi izvor energije, proteini su građevinski materijal za tijelo, a masti pružaju dugotrajnu energiju. Razumijevanje ove uloge pomaže u planiranju obroka. Zadatak: Kreiranje Plana Obroka za DanZadatak studenata je da kreiraju plan obroka za jedan dan koji će zadovoljiti njihove dnevne energetske i makronutritivne potrebe. Koristite sljedeće informacije:•	Vaša tjelesna masa: 65 kg•	Vaš nivo tjelesne aktivnosti: Aktivni ste i vježbate 4-5 puta sedmično. •	Vaši ciljevi: Održavanje tjelesne mase i podrška tjelesnoj izdržljivosti. Planirajte tri glavna obroka (doručak, ručak i večera) i dva međuobroka. Za svaki obrok, odaberite hranu koja će vam osigurati odgovarajuće količine ugljikohidrata, proteina i masti. Također, osigurajte da unosite dovoljno voća i povrća za unos vitamina i minerala.`;
 ---
-<body class="bg-white text-black font-body leading-normal personality-casual">
+
+<html
+  lang="bs"
+  class="bg-white text-black font-body leading-normal personality-casual"
+>
   <BaseHead meta={meta} />
   <Nav />
 
   <main class="py-12 lg:py-20">
-      <HomeHeader title={title} description={description} />
-<div>
-    <Form
-    client:load
-    question1 = "Is the calorie content in food a measure of its energy value?"
-answer1 = "yes"
+    <HomeHeader title={title} description={description} />
+    <div>
+      <Form
+        client:load
+        question1="Is the calorie content in food a measure of its energy value?"
+        answer1="yes"
+        question2="Can the body store excess calories as fat for future energy use?"
+        answer2="no"
+      />
 
-question2 = "Can the body store excess calories as fat for future energy use?"
-answer2 = "no"  
-  />
-    
-    <div class="flex w-full justify-center items-center mt-4 p-4">
-            <div class="max-w-7xl mx-auto w-full my-8 p-6 bg-paper border rounded-xl shadow-xl">
-              <p class="w-full font-bold text-left text-3xl my-8">
-                {title}
-              </p>
-              <div class="">
+      <div class="flex w-full justify-center items-center mt-4 p-4">
+        <div
+          class="max-w-7xl mx-auto w-full my-8 p-6 bg-paper border rounded-xl shadow-xl"
+        >
+          <p class="w-full font-bold text-left text-3xl my-8">
+            {title}
+          </p>
+          <div class="">
+            <p class="text-xl leading-loose">{text_1}</p>
+            <img
+              class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg"
+              src="/images/students/said/1.jpg"
+              width="128"
+            />
 
-<p class="text-xl leading-loose">{text_1}</p>
-<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/said/1.jpg" width="128"/>
+            <p class="text-xl leading-loose">{text_2}</p>
+            <img
+              class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg"
+              src="/images/students/said/2.jpg"
+              width="128"
+            />
 
-<p class="text-xl leading-loose">{text_2}</p>
-<img class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg" src="/images/students/said/2.jpg" width="128"/>
+            <p class="text-xl leading-loose">{text_3}</p>
+            <img
+              class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg"
+              src="/images/students/said/3.jpg"
+              width="128"
+            />
 
-</div>
-             </div>
+            <p class="text-xl leading-loose">{text_4}</p>
+            <img
+              class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg"
+              src="/images/students/said/4.jpg"
+              width="128"
+            />
+            <p class="text-xl leading-loose">{text_5}</p>
+            <img
+              class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg"
+              src="/images/students/said/5.jpg"
+              width="128"
+            />
+
+            <p class="text-xl leading-loose">{text_6}</p>
+            <img
+              class="w-1/2 mx-auto my-8 h-80 object-center object-cover rounded-lg"
+              src="/images/students/said/6.jpg"
+              width="128"
+            />
           </div>
-
-      </section>
-    </article>
+        </div>
+      </div>
+    </div>
   </main>
-</body>
+</html>
